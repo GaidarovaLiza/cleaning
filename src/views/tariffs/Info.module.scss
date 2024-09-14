@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (width < 450px) {
+    margin-top: 80px;
+  }
+}
+
+.wrapperTables {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}

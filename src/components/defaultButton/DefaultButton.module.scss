@@ -1,0 +1,60 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 15px;
+  border: none;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 25%;
+  }
+}
+
+.buttonFulfilled {
+  color: white;
+  background-color: #2b5de6;
+
+  &:hover:not([disabled]) {
+    background-color: #4973e9;
+    transition: 300ms;
+  }
+
+  > svg > path {
+    stroke: white;
+    fill: white;
+  }
+}
+
+.buttonOutlined {
+  color: #2b5de6;
+  background-color: white;
+
+  &[data-is-border='true'] {
+    border: 1px solid #2b5de6;
+
+    &:hover:not([disabled]) {
+      color: white;
+      background-color: #2b5de6;
+      transition: 300ms;
+
+      > svg > path {
+        stroke: white;
+        fill: #2b5de6;
+        transition: 300ms;
+      }
+    }
+  }
+
+  > svg > path {
+    stroke: #2b5de6;
+  }
+}
+
+.withOutBorder {
+  border-radius: 0;
+  padding: 20px 0;
+  color: #2b5de6;
+  background-color: white;
+}

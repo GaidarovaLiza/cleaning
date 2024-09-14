@@ -1,0 +1,86 @@
+.modal {
+  position: fixed;
+  z-index: 1300;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__heading {
+    font-weight: 600;
+
+    @media screen and (width < 450px) {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    color: #999;
+  }
+
+  .modalBody {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .closeButton {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        overflow: hidden;
+        border-radius: 8px;
+        background-color: #f2f2f2;
+      }
+    }
+
+    .content {
+      overflow: hidden;
+      width: 100%;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      gap: 35px;
+
+      .buttons {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+
+        > button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (width < 450px) {
+    align-items: end;
+
+    .modalBody {
+      border-radius: 20px 20px 0 0;
+      animation: slideFromBottom 200ms ease-out forwards;
+    }
+
+    @keyframes slideFromBottom {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+  }
+}
