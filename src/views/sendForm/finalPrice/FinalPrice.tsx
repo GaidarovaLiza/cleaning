@@ -67,7 +67,7 @@ export const FinalPrice = () => {
             localStorage.removeItem('additionalItemsList');
             setShowSuccessAlert(true);
           },
-          error => {
+          () => {
             setShowErrorAlert(true);
           }
         );

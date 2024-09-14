@@ -4,7 +4,7 @@ import { Typography } from '../typography/Typography';
 
 import style from './Table.module.scss';
 
-export type InitialColumnsType<T extends Type> = {
+export type InitialColumnsType = {
   data: string;
   label: string;
   width: number;
@@ -13,7 +13,7 @@ export type InitialColumnsType<T extends Type> = {
 type Type = Record<string, string | ReactNode>;
 
 export type TableProps<T extends Type> = {
-  initialColumns: Array<InitialColumnsType<T>>;
+  initialColumns: Array<InitialColumnsType>;
   rows: Array<T>;
 };
 

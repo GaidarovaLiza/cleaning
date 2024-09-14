@@ -71,7 +71,7 @@ export const useFormBodyStore = create<FormBody>(set => ({
   },
 }));
 
-export const useCalendarStore = create<CalendarState>((set, get) => ({
+export const useCalendarStore = create<CalendarState>(set => ({
   selectedDate: initialState.selectedDate,
   setSelectedDate: date => {
     set({ selectedDate: date });

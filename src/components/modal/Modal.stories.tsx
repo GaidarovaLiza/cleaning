@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 
 import { Modal, ModalProps } from './Modal';
-import { DefaultButton } from 'components/defaultButton';
+import { DefaultButton } from '../defaultButton';
 
 const meta: Meta<typeof Modal> = {
   argTypes: {
