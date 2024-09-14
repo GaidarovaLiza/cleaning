@@ -1,4 +1,3 @@
-import { Phone } from '@mui/icons-material';
 import dayjs, { Dayjs } from 'dayjs';
 import { create } from 'zustand';
 
@@ -18,7 +17,7 @@ interface CalendarState {
 }
 
 interface AdditionalItems {
-  selectedItemPrice: number;
+  selectedItemPrice: number | null;
   setSelectedItemPrice: (price: number) => void;
   additionalItemsList: string[];
   addAdditionalItem: (item: string) => void;
@@ -76,7 +75,7 @@ export const useCalendarStore = create<CalendarState>((set, get) => ({
   selectedDate: initialState.selectedDate,
   setSelectedDate: date => {
     set({ selectedDate: date });
-    localStorage.setItem('selectedDate', date.unix().toString());
+    localStorage.setItem('selectedDate', date ? date.unix().toString() : '');
   },
 }));
 

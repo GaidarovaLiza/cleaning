@@ -1,6 +1,6 @@
-import { Calendar } from 'views/calendar/Calendar';
+import { Calendar } from '../calendar/Calendar';
+import { AdditionalItems } from '../tariffs/additionalItems';
 import { FinalPrice } from './finalPrice/FinalPrice';
-import { AdditionalItems } from 'views/tariffs/additionalItems';
 
 import style from './SendForm.module.scss';
 

@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Grid } from '@mui/material';
-import { Typography } from 'components/typography/Typography';
-import { iconList } from 'data/additionals';
-import { useAdditionalItemsStore, useRoomCountStore } from 'store/store';
+import { useAdditionalItemsStore, useRoomCountStore } from '../../../store/store';
+import { Typography } from '../../../components/typography';
+import { iconList } from '../../../data/additionals';
 
 import style from './AdditionalItems.module.scss';
 

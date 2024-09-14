@@ -6,9 +6,9 @@ import { Header } from './views/header/Header';
 import AddCountForm from './views/addCountForm/AddCountForm';
 import { useRef } from 'react';
 import { ScrollContext } from './context/ScrollContext';
+import { Footer } from './views/footer';
 
 import style from './App.module.css';
-import { Footer } from 'views/footer';
 
 function App() {
   const aboutUsInfoRef = useRef<HTMLDivElement>(null);

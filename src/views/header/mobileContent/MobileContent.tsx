@@ -1,8 +1,8 @@
 import { Link } from '@mui/material';
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
+import { Typography } from '../../../components/typography';
 import GroupIcon from '@mui/icons-material/Group';
-import { Typography } from 'components/typography/Typography';
-import { iconData } from 'views/header/Header';
+import { iconData } from '../Header';
 import { Icon } from '../Icon/Icon';
 
 import style from './MobileContent.module.scss';

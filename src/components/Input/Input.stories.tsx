@@ -1,4 +1,4 @@
-import { Meta, StoryFn } from '@storybook/react/*';
+import { Meta, StoryFn } from '@storybook/react';
 import { Input, InputProps } from './Input';
 
 const meta: Meta<typeof Input> = {

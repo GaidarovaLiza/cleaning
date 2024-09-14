@@ -1,21 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { DefaultButton } from 'components/defaultButton';
-import { Typography } from 'components/typography/Typography';
-import {
-  useCalendarStore,
-  useFormBodyStore,
-  useRoomCountStore,
-  loadFromLocalStorage,
-  useAdditionalItemsStore,
-} from 'store/store';
-import { declineChosenRoom, declineChosenBathroom } from 'utils/utils';
-import { Modal } from 'components/modal/Modal';
-import { Input } from 'components/Input';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import Alert from '@mui/material/Alert';
 import { ClickAwayListener, Tooltip } from '@mui/material';
 import emailjs from '@emailjs/browser';
+import {
+  loadFromLocalStorage,
+  useAdditionalItemsStore,
+  useCalendarStore,
+  useFormBodyStore,
+  useRoomCountStore,
+} from '../../../store/store';
+import { declineChosenBathroom, declineChosenRoom } from '../../../utils/utils';
+import { Modal } from '../../../components/modal/Modal';
+import { Input } from '../../../components/Input';
+import { Typography } from '../../../components/typography';
+import { DefaultButton } from '../../../components/defaultButton';
 
 import style from './FinalPrice.module.scss';
 
@@ -34,7 +34,7 @@ export const FinalPrice = () => {
 
   const nameRef = useRef(name);
   const phoneRef = useRef(phone);
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const buttonText = isDesktop ? 'Заказать' : `Заказать за ${maintenancePrice} BYN`;
 
@@ -57,24 +57,28 @@ export const FinalPrice = () => {
   }, []);
 
   const handleSendUserData = () => {
-    emailjs
-      .sendForm('service_233ymmh', 'template_x00wonb', form.current, {
-        publicKey: 't7K2Fg96vesQITtfN',
-      })
-      .then(
-        () => {
-          localStorage.removeItem('additionalItemsList');
-          setShowSuccessAlert(true);
-        },
-        error => {
-          setShowErrorAlert(true);
-        }
-      );
+    if (form.current) {
+      emailjs
+        .sendForm('service_233ymmh', 'template_x00wonb', form.current, {
+          publicKey: 't7K2Fg96vesQITtfN',
+        })
+        .then(
+          () => {
+            localStorage.removeItem('additionalItemsList');
+            setShowSuccessAlert(true);
+          },
+          error => {
+            setShowErrorAlert(true);
+          }
+        );
+    } else {
+      console.error('Форма не была найдена');
+    }
   };
 
   const body = {
     name: nameRef.current,
-    date: selectedDate.format('DD/MM/YYYY'),
+    date: selectedDate?.format('DD/MM/YYYY'),
     roomCount: roomCount,
     bathRoomCount: bathRoomCount,
     finalPrice: maintenancePrice,
@@ -85,7 +89,9 @@ export const FinalPrice = () => {
     <div className={style.wrapper}>
       <div className={style.wrapper_textInfo}>
         <Typography variant="h2">
-          {`Вы выбрали уборку ${roomCount} ${declineChosenRoom(roomCount)}, ${bathRoomCount} ${declineChosenBathroom(bathRoomCount)}, кухни и коридора`}
+          {`Вы выбрали уборку ${roomCount} ${declineChosenRoom(roomCount)}, ${bathRoomCount} ${declineChosenBathroom(
+            bathRoomCount
+          )}, кухни и коридора`}
         </Typography>
       </div>
       <div className={style.wrapper_info}>

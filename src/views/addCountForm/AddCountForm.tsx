@@ -1,10 +1,11 @@
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { IncDecButton } from 'components/increseDecreseButton/IncDecButton';
-import { Typography } from 'components/typography/Typography';
 import { useNavigate } from 'react-router-dom';
-import { DefaultButton } from 'components/defaultButton/DefaultButton';
-import { useRoomCountStore } from 'store/store';
-import { declineRoom, declineBathroom } from 'utils/utils';
+
+import { useRoomCountStore } from '../../store/store';
+import { IncDecButton } from '../../components/increseDecreseButton';
+import { Typography } from '../../components/typography';
+import { declineBathroom, declineRoom } from '../../utils/utils';
+import { DefaultButton } from '../../components/defaultButton';
 
 import style from './AddCountForm.module.scss';
 

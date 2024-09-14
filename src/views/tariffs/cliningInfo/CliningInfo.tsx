@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { Grid, List, ListItem, ListItemText, ListItemIcon, Divider } from '@mui/material';
 import { CleaningServices, CheckCircle, CleanHands, DryCleaning } from '@mui/icons-material';
-import { Typography } from 'components/typography';
-import { ScrollContext } from 'context//ScrollContext';
+import { Typography } from '../../../components/typography';
+import { ScrollContext } from '../../../context';
 
 import style from './CliningInfo.module.scss';
 

@@ -2,7 +2,7 @@ const exception = [11, 12, 13, 14];
 const nominativePlural = [2, 3, 4];
 const genetivePlural = [5, 6, 7, 8, 9, 0];
 
-export const declineBathroom = bathRoomCount => {
+export const declineBathroom = (bathRoomCount: number) => {
   if (exception.includes(bathRoomCount)) return 'Санузлов';
 
   const ending = bathRoomCount % 10;
@@ -12,7 +12,7 @@ export const declineBathroom = bathRoomCount => {
   if (genetivePlural.includes(ending)) return 'Санузлов';
 };
 
-export const declineRoom = roomCount => {
+export const declineRoom = (roomCount: number) => {
   if (exception.includes(roomCount)) return 'Комнат';
 
   const ending = roomCount % 10;
@@ -22,7 +22,7 @@ export const declineRoom = roomCount => {
   if (genetivePlural.includes(ending)) return 'Комнат';
 };
 
-export const declineChosenRoom = roomCount => {
+export const declineChosenRoom = (roomCount: number) => {
   if (exception.includes(roomCount)) return 'комнат';
 
   const ending = roomCount % 10;
@@ -32,7 +32,7 @@ export const declineChosenRoom = roomCount => {
   if (genetivePlural.includes(ending)) return 'комнат';
 };
 
-export const declineChosenBathroom = bathRoomCount => {
+export const declineChosenBathroom = (bathRoomCount: number) => {
   if (exception.includes(bathRoomCount)) return 'санузлов';
 
   const ending = bathRoomCount % 10;

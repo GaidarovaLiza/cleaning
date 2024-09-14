@@ -1,5 +1,5 @@
 import { ReactNode, useCallback, useMemo } from 'react';
-import style from '';
+import style from './DefaultButton.module.scss';
 
 export type ButtonProps = {
   className?: string;

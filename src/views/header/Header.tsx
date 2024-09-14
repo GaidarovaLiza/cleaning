@@ -1,14 +1,14 @@
 import { useState, useContext } from 'react';
 import { AppBar, Box, Drawer, IconButton, Link, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { ScrollContext } from 'context/ScrollContext';
 import { Icon } from './Icon/Icon';
-import loonIcon from 'assets/telegram_3536661.png';
-import viberIcon from 'assets/viber_3955062.png';
-import whatsApp from 'assets//whatsapp_3536445.png';
-import logo from 'assets/full-logo.png';
-import { Typography } from 'components/typography/Typography';
+import loonIcon from '../../assets/telegram_3536661.png';
+import viberIcon from '../../assets/viber_3955062.png';
+import whatsApp from '../../assets/whatsapp_3536445.png';
+import logo from '../../assets/full-logo.png';
 import { MobileContent } from './mobileContent/MobileContent';
+import { ScrollContext } from '../../context';
+import { Typography } from '../../components/typography';
 
 import style from './Header.module.scss';
 

@@ -1,11 +1,11 @@
 import React, { useCallback } from 'react';
 import clsx from 'clsx';
 import { Modal as MuiModal } from '@mui/base';
-import { Typography } from 'components/typography';
 import CloseIcon from '@mui/icons-material/Close';
 import { SvgIcon } from '@mui/material';
 
 import style from './Modal.module.scss';
+import { Typography } from '../typography';
 
 export interface ModalProps {
   buttons?: React.ReactNode;
