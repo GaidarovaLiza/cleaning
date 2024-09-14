@@ -75,7 +75,10 @@
 }
 
 .number {
-  width: 120px;
+  width: 180px;
+  @media (width < 600px) {
+    display: none;
+  }
 }
 
 .mobileContent {

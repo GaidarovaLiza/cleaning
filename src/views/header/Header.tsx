@@ -76,16 +76,12 @@ export const Header = () => {
               color="default"
               aria-label="open drawer"
               onClick={() => setOpenDrawer(!openDrawer)}
-              sx={{ mr: 2, display: { xs: 'block', sm: 'none' } }}
+              sx={{ display: { xs: 'block', sm: 'none' } }}
             >
               <MenuIcon fontSize="large" />
             </IconButton>
             <Link style={{ textDecoration: 'none' }}>
-              <Typography
-                className={`${style.mobileContent}${style.number}`}
-                children={'+375 29 181 5595'}
-                variant="h3"
-              />
+              <Typography className={style.number} children={'+375 29 181 5595'} variant="h3" />
             </Link>
             <div className={style.iconRow}>
               {iconData.map(icon => (
