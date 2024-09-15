@@ -52,6 +52,7 @@ export const Header = () => {
             <Paper
               sx={{
                 boxShadow: 'none',
+                width: '330px',
               }}
               className={style.paper}
             >

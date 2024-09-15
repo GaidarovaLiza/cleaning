@@ -25,7 +25,7 @@
   &_button {
     font-size: 20px;
 
-    @media (width < 1000px) {
+    @media (width < 700px) {
       position: fixed;
       bottom: 20px;
       left: 50%;
@@ -36,7 +36,7 @@
   }
 
   &_payText {
-    @media (width < 1000px) {
+    @media (width < 700px) {
       display: none;
     }
   }
