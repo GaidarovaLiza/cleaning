@@ -2,7 +2,6 @@ import Iron from '../assets/ironing.png';
 import Fridge from '../assets/fridge.png';
 import Dish from '../assets/dish.png';
 import Balcony from '../assets/balcony.png';
-import Cat from '../assets/cat.png';
 import CleanDoor from '../assets/clean-door.png';
 import Hood from '../assets/hood.png';
 import Four from '../assets/four.png';
