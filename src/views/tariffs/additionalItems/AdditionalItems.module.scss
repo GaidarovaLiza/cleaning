@@ -91,10 +91,9 @@
 
 @media (max-width: 500px) {
   :global(.MuiGrid-root > .MuiGrid-item) {
-    padding-left: 0px;
-    margin-left: 0px;
+    padding-left: 0 !important;
     margin-bottom: 20px;
-    margin-left: 7px;
+    margin-left: 10px;
     width: 200px;
   }
 }
@@ -110,10 +109,9 @@
 
 @media (max-width: 399px) {
   :global(.MuiGrid-root > .MuiGrid-item) {
-    padding-left: 0;
-    margin-left: 0px;
+    padding-left: 0 !important;
+    margin-left: 10px;
     margin-bottom: 20px;
-    width: 175px;
-    margin-left: 7px;
+    width: 160px;
   }
 }
