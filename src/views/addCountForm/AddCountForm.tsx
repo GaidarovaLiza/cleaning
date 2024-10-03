@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useRoomCountStore } from '../../store/store';
 import { IncDecButton } from '../../components/increseDecreseButton';
 import { Typography } from '../../components/typography';
-import { declineBathroom, declineRoom } from '../../utils/utils';
+import { declineBathroom, declineRoom } from '../../utils/declineUtils';
 import { DefaultButton } from '../../components/defaultButton';
 
 import style from './AddCountForm.module.scss';

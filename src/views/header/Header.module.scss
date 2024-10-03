@@ -19,8 +19,14 @@
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0, #fff 100%);
 
   @media (width < 600px) {
-    background: none;
     padding-top: 20px;
+  }
+}
+
+.openDrawer {
+  @media (width < 600px) {
+    padding-top: 20px;
+    background: none;
   }
 }
 
@@ -69,7 +75,7 @@
   padding: 20px 15px 0 0;
 
   @media (width < 1024px) {
-    margin-top: 17px;
+    padding-right: 8px;
   }
 }
 

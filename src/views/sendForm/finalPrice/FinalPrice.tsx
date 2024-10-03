@@ -11,7 +11,7 @@ import {
   useFormBodyStore,
   useRoomCountStore,
 } from '../../../store/store';
-import { declineChosenBathroom, declineChosenRoom } from '../../../utils/utils';
+import { declineChosenBathroom, declineChosenRoom } from '../../../utils/declineUtils';
 import { Modal } from '../../../components/modal/Modal';
 import { Input } from '../../../components/Input';
 import { Typography } from '../../../components/typography';

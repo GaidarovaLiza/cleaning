@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppBar, Box, Drawer, IconButton, Link, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Icon } from './Icon/Icon';
@@ -11,6 +12,7 @@ import { ScrollContext } from '../../context';
 import { Typography } from '../../components/typography';
 
 import style from './Header.module.scss';
+import { scrollToAboutUs, scrollToCleaningInfo } from '../../utils/scrollUtils';
 
 export const iconData = [
   {
@@ -33,15 +35,20 @@ export const iconData = [
 export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const { aboutUsInfoRef, cliningInfoRef } = useContext(ScrollContext)!;
+  const navigate = useNavigate();
 
-  const scrollToAboutUs = () => {
-    setOpenDrawer(false);
-    aboutUsInfoRef?.current?.scrollIntoView({ behavior: 'smooth' });
+  const goToMainPageHandler = () => {
+    navigate('/');
   };
 
-  const scrollToCleaningInfo = () => {
+  const scrollToCleaningInfoHandler = () => {
     setOpenDrawer(false);
-    cliningInfoRef?.current?.scrollIntoView({ behavior: 'smooth' });
+    scrollToCleaningInfo(cliningInfoRef, navigate);
+  };
+
+  const scrollToAboutUsHandler = () => {
+    setOpenDrawer(false);
+    scrollToAboutUs(aboutUsInfoRef, navigate);
   };
 
   return (
@@ -56,18 +63,23 @@ export const Header = () => {
               }}
               className={style.paper}
             >
-              <MobileContent scrollToCleaningInfo={scrollToCleaningInfo} scrollToAboutUs={scrollToAboutUs} />
+              <MobileContent
+                scrollToCleaningInfo={scrollToCleaningInfoHandler}
+                scrollToAboutUs={scrollToAboutUsHandler}
+              />
             </Paper>
           </Box>
         </Drawer>
       </AppBar>
       <div className={style.wrapper}>
-        <div className={style.container}>
+        <div className={`${style.container} ${openDrawer ? style.openDrawer : ''}`}>
           <div className={style.logo}>
             {openDrawer ? (
               <div key="mobileContent" className={style.mobileContent}></div>
             ) : (
-              <Icon key="logo" className={style.logoImg} src={logo} alt={'Logo'} />
+              <div onClick={goToMainPageHandler}>
+                <Icon key="logo" className={style.logoImg} src={logo} alt={'Logo'} />
+              </div>
             )}
           </div>
           <div className={style.iconContainer}>

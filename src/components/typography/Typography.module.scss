@@ -74,11 +74,12 @@
   }
 }
 .medium {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   @media (width < 1024px) {
     font-size: 17px;
     line-height: 22px;
+    font-weight: 400;
   }
 }
 .semiBold_s {
