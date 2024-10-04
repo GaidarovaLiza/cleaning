@@ -18,7 +18,6 @@ import { Typography } from '../../../components/typography';
 import { DefaultButton } from '../../../components/defaultButton';
 
 import style from './FinalPrice.module.scss';
-import { phoneValidate } from '../../../utils/validation';
 
 export const FinalPrice = () => {
   const { maintenancePrice, roomCount, bathRoomCount, calculateMaintenancePrice } = useRoomCountStore();
@@ -41,10 +40,6 @@ export const FinalPrice = () => {
 
   const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPhone(event.target.value);
-
-    // if (phoneValidate(event.target.value)) {
-    //   setPhone(event.target.value);
-    // }
   };
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -93,34 +88,35 @@ export const FinalPrice = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.wrapper_textInfo}>
-        <Typography variant="h2">
+        <Typography className={style.wrapper_typography} variant="h2">
           {`Вы выбрали уборку ${roomCount} ${declineChosenRoom(roomCount)}, ${bathRoomCount} ${declineChosenBathroom(
             bathRoomCount
           )}, кухни и коридора`}
         </Typography>
-      </div>
-      <div className={style.wrapper_info}>
-        <Typography className={style.wrapper_typography} variant="medium_s">
-          Что входит в уборку квартиры
-        </Typography>
-        <ClickAwayListener onClickAway={() => setShowTooltip(false)}>
-          <Tooltip
-            PopperProps={{
-              disablePortal: true,
-            }}
-            onClose={() => setShowTooltip(false)}
-            open={showTooltip}
-            disableFocusListener
-            disableHoverListener
-            disableTouchListener
-            title="Влажная уборка всех поверхностей"
-            classes={{
-              tooltip: style.tooltip,
-            }}
-          >
-            <HelpOutlineIcon color="primary" onClick={() => setShowTooltip(true)} />
-          </Tooltip>
-        </ClickAwayListener>
+
+        <div className={style.wrapper_info}>
+          <Typography className={style.wrapper_typography} variant="medium_s">
+            Что входит в уборку квартиры
+          </Typography>
+          <ClickAwayListener onClickAway={() => setShowTooltip(false)}>
+            <Tooltip
+              PopperProps={{
+                disablePortal: true,
+              }}
+              onClose={() => setShowTooltip(false)}
+              open={showTooltip}
+              disableFocusListener
+              disableHoverListener
+              disableTouchListener
+              title="Влажная уборка всех поверхностей"
+              classes={{
+                tooltip: style.tooltip,
+              }}
+            >
+              <HelpOutlineIcon color="primary" onClick={() => setShowTooltip(true)} />
+            </Tooltip>
+          </ClickAwayListener>
+        </div>
       </div>
 
       <Typography className={style.wrapper_payText} variant="h3">{`К оплате: ${maintenancePrice} рублей`}</Typography>

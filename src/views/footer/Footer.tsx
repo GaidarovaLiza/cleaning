@@ -30,12 +30,14 @@ export const Footer = () => {
         <div className={style.logoWrapper}>
           <Icon src={Logo} key="logo" alt="Logo" className={style.logo} />
           <Typography variant="h3" className={style.logoText}>
-            Dolphin_service.by
+            dolphinservice.by
           </Typography>
         </div>
       </div>
       <div className={style.footerWrapper_item}>
-        <Typography variant="medium">Наши контакты:</Typography>
+        <Typography className={style.footerWrapper_contacts} variant="medium">
+          Наши контакты:
+        </Typography>
         <Link style={{ textDecoration: 'none' }}>
           <Typography className={style.number} children={'+375 29 181 5595'} variant="h3" />
         </Link>

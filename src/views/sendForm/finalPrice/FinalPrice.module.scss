@@ -1,7 +1,12 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   max-width: 500px;
+
+  &_typography {
+    height: 20px;
+  }
 
   &_info {
     display: flex;
@@ -16,7 +21,7 @@
   &_textInfo {
     display: flex;
     flex-direction: column;
-
+    gap: 15px;
     @media (width < 470px) {
       text-align: center;
     }
