@@ -35,6 +35,7 @@ export const AdditionalItems = () => {
             xs={0}
             sm={2}
             md={4}
+            sx={{ paddingLeft: 2 }}
             className={icon.isAdded ? `${style.gridItem} ${style.selectedItem}` : style.gridItem}
           >
             <div className={style.link} onClick={() => handleClick(icon)}>

@@ -80,7 +80,6 @@
 }
 
 :global(.MuiGrid-root > .MuiGrid-item) {
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,17 +87,7 @@
   max-width: 350px;
   margin: 0px 5px 20px 25px;
 }
-
-@media (max-width: 500px) {
-  :global(.MuiGrid-root > .MuiGrid-item) {
-    padding-left: 0 !important;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    width: 200px;
-  }
-}
-
-@media (max-width: 449px) {
+@media (max-width: 768px) {
   :global(.MuiGrid-root > .MuiGrid-item) {
     padding-left: 0 !important;
     margin-bottom: 20px;
@@ -107,11 +96,11 @@
   }
 }
 
-@media (max-width: 399px) {
+@media (max-width: 389px) {
   :global(.MuiGrid-root > .MuiGrid-item) {
     padding-left: 0 !important;
-    margin-left: 10px;
     margin-bottom: 20px;
+    margin-left: 10px;
     width: 160px;
   }
 }

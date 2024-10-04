@@ -18,6 +18,7 @@ import { Typography } from '../../../components/typography';
 import { DefaultButton } from '../../../components/defaultButton';
 
 import style from './FinalPrice.module.scss';
+import { phoneValidate } from '../../../utils/validation';
 
 export const FinalPrice = () => {
   const { maintenancePrice, roomCount, bathRoomCount, calculateMaintenancePrice } = useRoomCountStore();
@@ -40,6 +41,10 @@ export const FinalPrice = () => {
 
   const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPhone(event.target.value);
+
+    // if (phoneValidate(event.target.value)) {
+    //   setPhone(event.target.value);
+    // }
   };
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -139,6 +144,7 @@ export const FinalPrice = () => {
             name="from_phone"
             variant="filled"
             label="Номер телефона:"
+            validate={true}
             value={phone}
             onChange={handlePhoneChange}
           />
