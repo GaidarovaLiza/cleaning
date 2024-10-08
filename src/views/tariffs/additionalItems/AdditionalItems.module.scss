@@ -75,6 +75,8 @@
   margin: 0;
   @media (width < 550px) {
     width: 100%;
+    margin: 0;
+    gap: 5px
   }
 }
 
@@ -89,22 +91,19 @@
 @media (max-width: 768px) {
   :global(.MuiGrid-root > .MuiGrid-item) {
     height: 230px;
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0 ;
     align-items: stretch;
-    margin-left: 10px;
+    max-width: 1000px;
     width: 45%;
-    // width: 178px;
   }
 }
 
 @media (max-width: 395px) {
   :global(.MuiGrid-root > .MuiGrid-item) {
     align-items: stretch;
-    margin-bottom: 20px;
-    margin-left: 0;
+    margin: 0 0px 10px 0px;
     height: 230px;
-    margin-left: 0px;
-    width: 50%;
+    max-width: 1000px;
+    width: 47%;
   }
 }
