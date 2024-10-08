@@ -88,21 +88,22 @@
 }
 @media (max-width: 768px) {
   :global(.MuiGrid-root > .MuiGrid-item) {
-    padding-left: 0 !important;
-    height: 220px;
+    height: 230px;
+    margin: 0;
     margin-bottom: 20px;
+    align-items: stretch;
     margin-left: 10px;
-    width: 170px;
+    width: 178px;
   }
 }
 
-@media (max-width: 389px) {
+@media (max-width: 395px) {
   :global(.MuiGrid-root > .MuiGrid-item) {
-    padding-left: 0 !important;
+    align-items: stretch;
     margin-bottom: 20px;
     margin-left: 0;
-    height: 220px;
-    margin-left: 10px;
-    width: 167px;
+    height: 230px;
+    margin-left: 0px;
+    width: 175px;
   }
 }
