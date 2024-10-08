@@ -75,8 +75,8 @@
   margin: 0;
   @media (width < 550px) {
     width: 100%;
-    margin: 0;
-    gap: 5px
+    margin-left: 0px;
+    gap: 5px;
   }
 }
 
@@ -91,10 +91,10 @@
 @media (max-width: 768px) {
   :global(.MuiGrid-root > .MuiGrid-item) {
     height: 230px;
-    margin: 0 ;
+    margin: 0;
     align-items: stretch;
     max-width: 1000px;
-    width: 45%;
+    width: 49%;
   }
 }
 
@@ -104,6 +104,6 @@
     margin: 0 0px 10px 0px;
     height: 230px;
     max-width: 1000px;
-    width: 47%;
+    width: 49%;
   }
 }
