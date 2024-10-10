@@ -74,11 +74,8 @@
   position: relative;
   height: 1vw;
   z-index: 105;
-  padding: 20px 15px 0 0;
-
-  @media (width < 1024px) {
-    padding-right: 8px;
-  }
+  padding-top: 20px;
+  width: 60px;
 }
 
 .number {

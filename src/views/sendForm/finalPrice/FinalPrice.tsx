@@ -108,7 +108,7 @@ export const FinalPrice = () => {
               disableFocusListener
               disableHoverListener
               disableTouchListener
-              title="Влажная уборка всех поверхностей"
+              title="Влажная и сухая уборка всех поверхностей"
               classes={{
                 tooltip: style.tooltip,
               }}
