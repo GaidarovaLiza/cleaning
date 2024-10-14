@@ -17,17 +17,17 @@ import { scrollToAboutUs, scrollToCleaningInfo } from '../../utils/scrollUtils';
 export const iconData = [
   {
     src: loonIcon,
-    href: 'https://t.me/margarita_nova',
+    href: 'https://t.me/dolphin_service',
     alt: 'telegram',
   },
   {
     src: viberIcon,
-    href: 'https://viber.com/margarita_nova',
+    href: 'https://viber.com/dolphin_service',
     alt: 'viber',
   },
   {
     src: whatsApp,
-    href: 'https://whatsapp.com/margarita_nova',
+    href: 'https://whatsapp.com/dolphin_service',
     alt: 'whatsApp',
   },
 ];
