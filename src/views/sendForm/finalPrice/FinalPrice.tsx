@@ -82,7 +82,7 @@ export const FinalPrice = () => {
     roomCount: roomCount,
     bathRoomCount: bathRoomCount,
     finalPrice: maintenancePrice,
-    additionalItems: additionalItemsList,
+    additionalItems: additionalItemsList.filter(option => option.isAdded).map(item => item.text),
   };
 
   return (

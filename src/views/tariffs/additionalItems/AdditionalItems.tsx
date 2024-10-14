@@ -16,7 +16,7 @@ export const AdditionalItems = () => {
     const priceNumber = parseInt(item.price.replace(/\s|руб/g, ''));
     setSelectedItemPrice(priceNumber);
 
-    addAdditionalItem(item.text);
+    addAdditionalItem(item);
 
     item.isAdded ? addMaintenancePrice(-priceNumber) : addMaintenancePrice(priceNumber);
     item.isAdded = !item.isAdded;
