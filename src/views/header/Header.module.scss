@@ -75,7 +75,11 @@
   height: 1vw;
   z-index: 105;
   padding-top: 20px;
-  width: 60px;
+  padding: 25px 15px;
+
+  @media (width < 600px) {
+    padding: 20px 0;
+  }
 }
 
 .number {
