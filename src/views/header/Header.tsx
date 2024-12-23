@@ -1,11 +1,9 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AppBar, Box, Drawer, IconButton, Link, Paper } from '@mui/material';
+import { AppBar, Box, Drawer, IconButton, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Icon } from './Icon/Icon';
-import loonIcon from '../../assets/telegram_3536661.png';
-import viberIcon from '../../assets/viber_3955062.png';
-import whatsApp from '../../assets/whatsapp_3536445.png';
+import { iconData } from '../../data/icons';
 import logo from '../../assets/full-logo.png';
 import { MobileContent } from './mobileContent/MobileContent';
 import { ScrollContext } from '../../context';
@@ -14,21 +12,22 @@ import { Typography } from '../../components/typography';
 import style from './Header.module.scss';
 import { scrollToAboutUs, scrollToCleaningInfo } from '../../utils/scrollUtils';
 
-export const iconData = [
+const menuItems = [
   {
-    src: loonIcon,
-    href: 'https://t.me/dolphin_service',
-    alt: 'telegram',
+    title: 'О нас',
+    callback: () => {},
   },
   {
-    src: viberIcon,
-    href: 'https://viber.com/dolphin_service',
-    alt: 'viber',
+    title: 'Преимущества',
+    callback: () => {},
   },
   {
-    src: whatsApp,
-    href: 'https://whatsapp.com/dolphin_service',
-    alt: 'whatsApp',
+    title: 'Услуги',
+    callback: () => {},
+  },
+  {
+    title: 'FAQ',
+    callback: () => {},
   },
 ];
 
@@ -82,6 +81,11 @@ export const Header = () => {
               </div>
             )}
           </div>
+          {menuItems.map(menuItem => (
+            <div className={style.wrapper_menuItem} onClick={menuItem.callback}>
+              {menuItem.title}
+            </div>
+          ))}
           <div className={style.iconContainer}>
             <IconButton
               edge="start"
@@ -93,13 +97,22 @@ export const Header = () => {
             >
               <MenuIcon fontSize="large" />
             </IconButton>
-            <Link style={{ textDecoration: 'none' }}>
-              <Typography className={style.number} children={'+375 29 181 5595'} variant="h3" />
-            </Link>
-            <div className={style.iconRow}>
-              {iconData.map(icon => (
-                <Icon key={icon.src} className={style.mobileContent} src={icon.src} alt={icon.alt} href={icon.href} />
-              ))}
+
+            <div className={style.socialWrapper}>
+              <Typography className={style.number} children={'+375 29 181 5595'} variant="regular" />
+              <div className={style.iconRow}>
+                {iconData.map(icon => (
+                  <div className={style.iconRow_iconWrapper}>
+                    <Icon
+                      key={icon.src}
+                      className={style.mobileContent}
+                      src={icon.src}
+                      alt={icon.alt}
+                      href={icon.href}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

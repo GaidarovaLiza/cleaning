@@ -2,7 +2,7 @@ import { Link } from '@mui/material';
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
 import { Typography } from '../../../components/typography';
 import GroupIcon from '@mui/icons-material/Group';
-import { iconData } from '../Header';
+import { iconData } from '../../../data/icons';
 import { Icon } from '../Icon/Icon';
 
 import style from './MobileContent.module.scss';
