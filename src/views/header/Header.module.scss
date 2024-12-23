@@ -6,12 +6,21 @@
   position: fixed;
   z-index: 9999;
   width: 100%;
+
+  &_menuItem {
+    margin: 18px;
+    cursor: pointer;
+  }
+
+  &_menuItem:hover {
+    color: #2059c5;
+  }
 }
 
 .container {
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   top: 0;
   left: 0;
   width: 100%;
@@ -34,8 +43,18 @@
 
 .iconRow {
   display: flex;
-  gap: 4px;
-  margin: 5px 10px 0 15px;
+  align-items: center;
+  gap: 7px;
+
+  &_iconWrapper {
+    background-color: #e2ebff;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .logo {
@@ -74,7 +93,6 @@
   position: relative;
   height: 1vw;
   z-index: 105;
-  padding-top: 20px;
   padding: 25px 15px;
 
   @media (width < 600px) {
@@ -83,16 +101,30 @@
 }
 
 .number {
-  width: 180px;
+  color: #e2ebff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
   @media (width < 600px) {
     display: none;
   }
 }
 
 .mobileContent {
-  height: 50px;
-  width: 50px;
+  height: 16px;
+  width: 16px;
   @media (width < 600px) {
     display: none;
   }
+}
+
+.socialWrapper {
+  background-color: #2059c5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  gap: 10px;
+  height: 30px;
 }

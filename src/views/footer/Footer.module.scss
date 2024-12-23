@@ -1,107 +1,62 @@
 .footerWrapper {
-  height: 220px;
-  width: 100%;
-  background-color: #242424;
+  height: 100px;
+  width: -webkit-fill-available;
+  background-color: #2059c5;
   color: white;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  padding: 0 15px;
 
   @media (width < 450px) {
     width: 100%;
     height: 160px;
   }
 
-  &_contacts {
-    height: 8px;
-  }
-
-  &_item {
-    border-right: 1px solid #7d7d7d;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 13px;
-    @media (width < 450px) {
-      display: flex;
-      border: none;
-      flex-direction: column;
-      gap: 2px;
-      width: 100%;
-    }
-
-    &:first-child {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &:last-child {
-      @media (width < 450px) {
-        display: none;
-      }
-    }
-  }
-}
-
-.mobileContent {
-  @media (width < 450px) {
-    height: 35px;
-    width: 35px;
-    display: flex;
-  }
-}
-
-.logoWrapper {
-  display: flex;
-  gap: 10px;
-  @media (width < 450px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
-}
-
-.logo {
-  height: 65px;
-  width: 65px;
-}
-
-.logoText {
-  font-size: 13px;
-}
-
-.icons {
-  display: flex;
-  gap: 12px;
-  @media (width < 450px) {
+  &_icon {
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    padding: 5px;
+    gap: 10px;
+    height: 30px;
+    margin-bottom: 25px;
   }
+
+  &_social {
+    display: flex;
+    gap: 10px;
+  }
+
+  &_numberWrapper {
+    background-color: #e2ebff;
+    border-radius: 10px;
+    width: 200px;
+    padding: 5px;
+  }
+}
+
+.socialItem {
+  height: 26px;
+  width: 26px;
+}
+
+.iconRow {
+  background-color: #e2ebff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .number {
-  color: aliceblue;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.link {
+  color: black;
+  padding: 0;
+  margin: 0;
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-left: 7px;
-  text-decoration: none;
-  gap: 5px;
-}
-
-.wrapper_padding {
-  color: white;
-  font-size: 14px;
-
-  @media (width < 450px) {
-    display: flex;
-    gap: 5px;
-  }
 }
