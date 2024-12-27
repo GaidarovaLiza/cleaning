@@ -1,9 +1,10 @@
-.button {
+.content {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  border-radius: 13px;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 100%;
 
   &:disabled {
     cursor: not-allowed;
