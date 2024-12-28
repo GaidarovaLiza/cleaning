@@ -16,6 +16,10 @@
   gap: 15px;
 
   &_roomCount {
+    background-image: url('../../assets/elips.svg');
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: calc(100% + 380px) center;
     width: 660px;
     height: 509px;
     background-color: #ffffff;
