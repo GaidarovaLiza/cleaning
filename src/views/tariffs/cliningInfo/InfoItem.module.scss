@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 30px;
+  border: 1.5px white solid;
+  border-radius: 30px;
+
+  &_title {
+    margin: 0;
+  }
+
+  &_text {
+    margin-bottom: 0;
+  }
+}

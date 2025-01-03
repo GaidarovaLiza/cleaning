@@ -1,64 +1,53 @@
-import { useContext } from 'react';
-import { Grid, List, ListItem, ListItemText, ListItemIcon, Divider } from '@mui/material';
-import { CleaningServices, CheckCircle, CleanHands, DryCleaning } from '@mui/icons-material';
-import { Typography } from '../../../components/typography';
-import { ScrollContext } from '../../../context';
-
+import { InfoItem } from './InfoItem.tsx';
 import style from './CliningInfo.module.scss';
+import { Typography } from '../../../components/typography';
 
 export const CliningInfo = () => {
-  const { cliningInfoRef } = useContext(ScrollContext)!;
+  // const { cliningInfoRef } = useContext(ScrollContext)!;
+
+  const info = [
+    {
+      id: 1,
+      title: (
+        <>
+          Соберите свою идеальную
+          <br />
+          уборку самостоятельно
+        </>
+      ),
+      text: 'Выберите только те услуги, которые вам нужны и составьте индивидуальный пакет услуг',
+    },
+    {
+      id: 2,
+      title: 'Доверьтесь профессионалам с качественными средствами для уборки',
+      text: 'У нас работают опытные клинеры, которые знают свое дело и пользуются безопасными средствами (класс Е7)',
+    },
+    {
+      id: 3,
+      title: 'Комфортные цены с индивидуальными условиями',
+      text: 'Мы предлагаем доступные цены на все виды услуг, чтобы клининг был доступен каждому',
+    },
+    {
+      id: 4,
+      title: (
+        <>
+          Готовы к работе в день <br /> оформления уборки
+        </>
+      ),
+      text: 'Мы идем навстречу и если нужна уборка «день в день», то сделаем все возможное, чтобы ее выполнить',
+    },
+  ];
 
   return (
-    <div className={style.cliningInfo} ref={cliningInfoRef}>
-      <Grid item xs={12} md={6}>
-        <Typography className={style.titleColor} variant="h2">
-          Клининг: забота о вашем доме и комфорте
-        </Typography>
-        <Typography variant="medium">
-          Клининг – это комплекс профессиональных услуг по уборке жилых помещений, направленный на создание комфортной и
-          чистой среды для жизни. Профессиональный клининг – это не просто уборка, это забота о вашем доме, вашем
-          комфорте и вашем здоровье.
-        </Typography>
-        <Typography variant="medium">
-          Клининговые компании предлагают широкий спектр услуг: от стандартной уборки до глубокой генеральной уборки,
-          химчистки мебели и ковров, мойки окон, чистки фасадов и многое другое.
-        </Typography>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Typography className={style.titleColor} variant="h3">
-          Преимущества клининга:
-        </Typography>
-        <List>
-          <ListItem>
-            <ListItemIcon>
-              <CleaningServices />
-            </ListItemIcon>
-            <ListItemText primary="Экономия времени и сил" />
-          </ListItem>
-          <Divider />
-          <ListItem>
-            <ListItemIcon>
-              <DryCleaning />
-            </ListItemIcon>
-            <ListItemText primary="Качество и профессионализм" />
-          </ListItem>
-          <Divider />
-          <ListItem>
-            <ListItemIcon>
-              <CleanHands />
-            </ListItemIcon>
-            <ListItemText primary="Использование профессиональных средств" />
-          </ListItem>
-          <Divider />
-          <ListItem>
-            <ListItemIcon>
-              <CheckCircle />
-            </ListItemIcon>
-            <ListItemText primary="Гарантия результата" />
-          </ListItem>
-        </List>
-      </Grid>
+    <div className={style.container}>
+      <Typography variant={'h1'} className={style.container_title}>
+        Забота о вашем доме <br /> с клинингом <span className={style.color}>Дельфин</span>
+      </Typography>
+      <div className={style.container_cliningInfo}>
+        {info.map(item => (
+          <InfoItem key={item.id} title={item.title} text={item.text} />
+        ))}
+      </div>
     </div>
   );
 };

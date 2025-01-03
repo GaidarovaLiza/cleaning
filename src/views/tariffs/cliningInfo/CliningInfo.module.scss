@@ -1,18 +1,15 @@
-.cliningInfo {
-  padding: 0 20px;
-  border-radius: 5px;
-  display: block;
+.container {
+  &_title {
+    margin-left: 40px;
+  }
+
+  &_cliningInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.cliningInfo ul {
-  list-style: disc;
-  margin-left: 20px;
-}
 
-.cliningInfo li {
-  margin-bottom: 10px;
-}
-
-.titleColor {
-  color: #2b5de6;
+.color {
+  color: #2C67F6;
 }
