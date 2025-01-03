@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
-
-import styles from './InfoItem.module.scss';
 import { Typography } from '../../../components/typography';
+import styles from './InfoItem.module.scss';
 
 export interface TypographyProps {
   title: string;
