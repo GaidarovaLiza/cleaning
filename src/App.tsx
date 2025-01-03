@@ -2,11 +2,11 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useRef } from 'react';
 
 import { ScrollContext } from 'src/context';
-import { Header } from '../header';
 import { Main } from 'src/pages/main/Main';
-import { Info } from './Info';
-import { Footer } from '../footer';
-import SendForm from '../sendForm/SendForm';
+import { Header } from './views/header';
+import { Info } from './views/tariffs';
+import { Footer } from './views/footer';
+import SendForm from './views/sendForm/SendForm';
 
 import styles from './App.module.scss';
 
