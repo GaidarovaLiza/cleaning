@@ -83,7 +83,7 @@ export const Header = () => {
             )}
           </div>
           {menuItems.map(menuItem => (
-            <div className={style.wrapper_menuItem} onClick={menuItem.callback}>
+            <div key={menuItem.title} className={style.wrapper_menuItem} onClick={menuItem.callback}>
               {menuItem.title}
             </div>
           ))}
@@ -103,7 +103,7 @@ export const Header = () => {
               <Typography className={style.number} children={'+375 29 181 5595'} variant="regular" />
               <div className={style.iconRow}>
                 {iconData.map(icon => (
-                  <div className={style.iconRow_iconWrapper}>
+                  <div  key={icon.src} className={style.iconRow_iconWrapper}>
                     <Icon
                       key={icon.src}
                       className={style.mobileContent}
