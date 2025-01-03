@@ -7,7 +7,7 @@ import { useRef } from 'react';
 import { ScrollContext } from './context/ScrollContext';
 import { Footer } from './views/footer';
 
-import style from './App.module.css';
+import style from './App.module.scss';
 
 function App() {
   const aboutUsInfoRef = useRef<HTMLDivElement>(null);
@@ -16,9 +16,11 @@ function App() {
   return (
     <div className={style.mainContainer}>
       <div className={style.container}>
+			
         <BrowserRouter>
           <ScrollContext.Provider value={{ aboutUsInfoRef, cleaningInfoRef }}>
             <Header />
+					<div className={style.container_wrapp}>
             <Routes>
               <Route
                 path="/"
@@ -33,8 +35,10 @@ function App() {
               <Route path="/send-form" element={<SendForm />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
+					</div>
           </ScrollContext.Provider>
         </BrowserRouter>
+			
       </div>
     </div>
   );

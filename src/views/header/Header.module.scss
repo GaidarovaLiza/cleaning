@@ -10,6 +10,10 @@
   &_menuItem {
     margin: 18px;
     cursor: pointer;
+
+		@media (width < 1000px) {
+			display: none;
+		}
   }
 
   &_menuItem:hover {
@@ -31,6 +35,7 @@
     padding-top: 20px;
     height: 10vh;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0, #fff 50%);
+		gap: 20%
   }
 }
 
@@ -127,4 +132,8 @@
   padding: 5px;
   gap: 10px;
   height: 30px;
+
+	@media (width < 1000px) {
+		display: none;
+	}
 }

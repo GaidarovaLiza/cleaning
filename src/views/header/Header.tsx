@@ -8,9 +8,10 @@ import logo from '../../assets/full-logo.png';
 import { MobileContent } from './mobileContent/MobileContent';
 import { ScrollContext } from '../../context';
 import { Typography } from '../../components/typography';
+import { scrollToAboutUs, scrollToCleaningInfo } from '../../utils/scrollUtils';
 
 import style from './Header.module.scss';
-import { scrollToAboutUs, scrollToCleaningInfo } from '../../utils/scrollUtils';
+
 
 const menuItems = [
   {
@@ -33,7 +34,7 @@ const menuItems = [
 
 export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const { aboutUsInfoRef, cleaningInfoRef } = useContext(ScrollContext)!;
+  const { aboutUsInfoRef, cleaningInfoRef } = useContext(ScrollContext) || {};
   const navigate = useNavigate();
 
   const goToMainPageHandler = () => {
