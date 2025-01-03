@@ -33,7 +33,7 @@ const menuItems = [
 
 export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const { aboutUsInfoRef, cliningInfoRef } = useContext(ScrollContext)!;
+  const { aboutUsInfoRef, cleaningInfoRef } = useContext(ScrollContext)!;
   const navigate = useNavigate();
 
   const goToMainPageHandler = () => {
@@ -42,7 +42,7 @@ export const Header = () => {
 
   const scrollToCleaningInfoHandler = () => {
     setOpenDrawer(false);
-    scrollToCleaningInfo(cliningInfoRef, navigate);
+    scrollToCleaningInfo(cleaningInfoRef, navigate);
   };
 
   const scrollToAboutUsHandler = () => {

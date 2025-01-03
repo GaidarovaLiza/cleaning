@@ -1,9 +1,16 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e2ebff;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 100%;
+  width: 80vw;
+  max-width: 2000px; /* пока хз, мб и не 2000 */
   overflow-y: none;
-  background-color: #e2ebff;
 }

@@ -9,7 +9,7 @@ export const AboutUs = () => {
   const { aboutUsInfoRef } = useContext(ScrollContext)!;
 
   return (
-    <div className={style.cliningInfo} ref={aboutUsInfoRef}>
+    <div className={style.cleaningInfo} ref={aboutUsInfoRef}>
       <Grid item xs={12} md={6} style={{ borderTop: 'none' }}>
         <Typography className={style.titleColor} variant="h2">
           Почему стоит выбрать именно нас?
