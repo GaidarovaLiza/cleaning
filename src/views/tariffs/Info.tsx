@@ -1,4 +1,4 @@
-import { CliningInfo } from './cliningInfo/CliningInfo';
+import { CleaningInfo } from './cleaningInfo/CleaningInfo.tsx';
 
 import style from './Info.module.scss';
 import { AboutUs } from './maintenanceCleaning';
@@ -6,7 +6,7 @@ import { AboutUs } from './maintenanceCleaning';
 export const Info = () => {
   return (
     <div className={style.wrapper}>
-      <CliningInfo />
+      <CleaningInfo />
       <AboutUs />
     </div>
   );

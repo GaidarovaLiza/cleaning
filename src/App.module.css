@@ -11,6 +11,6 @@
   align-items: center;
   height: 100%;
   width: 80vw;
-  max-width: 2000px; // пока хз, мб и не 2000
+  max-width: 2000px; /* пока хз, мб и не 2000 */
   overflow-y: none;
 }

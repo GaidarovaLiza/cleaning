@@ -11,13 +11,13 @@ import style from './App.module.css';
 
 function App() {
   const aboutUsInfoRef = useRef<HTMLDivElement>(null);
-  const cliningInfoRef = useRef<HTMLDivElement>(null);
+  const cleaningInfoRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className={style.mainContainer}>
       <div className={style.container}>
         <BrowserRouter>
-          <ScrollContext.Provider value={{ aboutUsInfoRef, cliningInfoRef }}>
+          <ScrollContext.Provider value={{ aboutUsInfoRef, cleaningInfoRef }}>
             <Header />
             <Routes>
               <Route

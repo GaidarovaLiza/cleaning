@@ -1,10 +1,8 @@
 import { InfoItem } from './InfoItem.tsx';
-import style from './CliningInfo.module.scss';
+import style from './CleaningInfo.module.scss';
 import { Typography } from '../../../components/typography';
 
-export const CliningInfo = () => {
-  // const { cliningInfoRef } = useContext(ScrollContext)!;
-
+export const CleaningInfo = () => {
   const info = [
     {
       id: 1,
@@ -39,11 +37,11 @@ export const CliningInfo = () => {
   ];
 
   return (
-    <div className={style.container}>
-      <Typography variant={'h1'} className={style.container_title}>
+    <div>
+      <Typography variant={'h1'} className={style.title}>
         Забота о вашем доме <br /> с клинингом <span className={style.color}>Дельфин</span>
       </Typography>
-      <div className={style.container_cliningInfo}>
+      <div className={style.cleaningInfo}>
         {info.map(item => (
           <InfoItem key={item.id} title={item.title} text={item.text} />
         ))}
