@@ -1,10 +1,11 @@
+import { useContext } from 'react';
 import { Grid, List, ListItem, ListItemText, ListItemIcon, Divider } from '@mui/material';
 import CheckCircle from '@mui/icons-material/CheckCircle';
-import { useContext } from 'react';
-import { ScrollContext } from '../../../context';
-import { Typography } from '../../../components/typography';
+import { ScrollContext } from 'src/context';
+import { Typography } from 'src/components/typography';
 
 import styles from './AboutUs.module.scss';
+
 
 export const AboutUs = () => {
   const { aboutUsInfoRef } = useContext(ScrollContext)!;

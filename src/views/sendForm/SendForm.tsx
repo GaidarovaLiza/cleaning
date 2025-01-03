@@ -1,6 +1,6 @@
 import { Calendar } from '../calendar/Calendar';
 import { AdditionalItems } from '../tariffs/additionalItems';
-import { FinalPrice } from './finalPrice/FinalPrice';
+import { FinalPrice } from './finalPrice';
 
 import styles from './SendForm.module.scss';
 
