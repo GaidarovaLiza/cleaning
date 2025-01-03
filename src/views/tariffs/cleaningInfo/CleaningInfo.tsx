@@ -1,5 +1,5 @@
 import { InfoItem } from './InfoItem.tsx';
-import { Typography } from 'src/components/typography/Typography.tsx';
+import { Typography } from '../../../components/typography';
 
 import styles from './CleaningInfo.module.scss';
 

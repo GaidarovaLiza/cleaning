@@ -1,7 +1,7 @@
-import Logo from 'src/assets/logo.png';
+import { Typography } from '../../components/typography';
 import { Icon } from '../header/Icon';
-import { Typography } from 'src/components/typography';
-import { iconData } from 'src/data/icons';
+import { iconData } from '../../data/icons';
+import Logo from '../../assets/logo.png';
 
 import styles from './Footer.module.scss';
 

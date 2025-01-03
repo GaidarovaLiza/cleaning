@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
-import { useRoomCountStore } from 'src/store/store';
-import { IncDecButton } from 'src/components/increseDecreseButton';
-import { Typography } from 'src/components/typography';
-import { declineBathroom, declineRoom } from 'src/utils/declineUtils';
-import { DefaultButton } from 'src/components/defaultButton';
+import { useRoomCountStore } from '../../store/store';
+import { IncDecButton } from '../../components/increseDecreseButton';
+import { Typography } from '../../components/typography';
+import { declineBathroom, declineRoom } from '../../utils/declineUtils';
+import { DefaultButton } from '../../components/defaultButton';
 
 import styles from './AddCountForm.module.scss';
 

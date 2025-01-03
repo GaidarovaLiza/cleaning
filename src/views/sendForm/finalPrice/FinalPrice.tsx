@@ -4,13 +4,19 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import Alert from '@mui/material/Alert';
 import { ClickAwayListener, Tooltip } from '@mui/material';
 import emailjs from '@emailjs/browser';
+import {
+  loadFromLocalStorage,
+  useAdditionalItemsStore,
+  useCalendarStore,
+  useFormBodyStore,
+  useRoomCountStore,
+} from '../../../store/store';
+import { declineChosenBathroom, declineChosenRoom } from '../../../utils/declineUtils';
+import { Modal } from '../../../components/modal/Modal';
+import { Input } from '../../../components/Input';
+import { Typography } from '../../../components/typography';
+import { DefaultButton } from '../../../components/defaultButton';
 
-import { loadFromLocalStorage, useAdditionalItemsStore, useCalendarStore, useFormBodyStore, useRoomCountStore } from 'src/store/store';
-import { Typography } from 'src/components/typography';
-import { declineChosenBathroom, declineChosenRoom } from 'src/utils/declineUtils';
-import { DefaultButton } from 'src/components/defaultButton';
-import { Modal } from 'src/components/modal/Modal';
-import { Input } from 'src/components/Input';
 import styles from './FinalPrice.module.scss';
 
 export const FinalPrice = () => {

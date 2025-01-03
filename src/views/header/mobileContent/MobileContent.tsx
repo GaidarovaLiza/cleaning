@@ -1,13 +1,11 @@
 import { Link } from '@mui/material';
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
+import { Typography } from '../../../components/typography';
 import GroupIcon from '@mui/icons-material/Group';
-
-import { Typography } from 'src/components/typography';
-import { iconData } from 'src/data/icons';
-import { Icon } from '../Icon';
+import { iconData } from '../../../data/icons';
+import { Icon } from '../Icon/Icon';
 
 import styles from './MobileContent.module.scss';
-
 
 interface MobileContent {
   scrollToCleaningInfo: () => void;
