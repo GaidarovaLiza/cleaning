@@ -3,9 +3,11 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { StaticDatePicker } from '@mui/x-date-pickers';
 import 'dayjs/locale/ru';
-import { useCalendarStore } from '../../store/store';
-import { Typography } from '../../components/typography';
+import { useCalendarStore } from 'src/store/store';
+import { Typography } from 'src/components/typography';
+
 import { useStyles } from './overideStyle';
+
 
 export const Calendar = () => {
   const { selectedDate, setSelectedDate } = useCalendarStore();

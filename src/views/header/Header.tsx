@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { AppBar, Box, Drawer, IconButton, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Icon } from './Icon/Icon';
-import { iconData } from '../../data/icons';
-import logo from '../../assets/full-logo.png';
-import { MobileContent } from './mobileContent/MobileContent';
-import { ScrollContext } from '../../context';
-import { Typography } from '../../components/typography';
-import { scrollToAboutUs, scrollToCleaningInfo } from '../../utils/scrollUtils';
+
+import logo from 'src/assets/full-logo.png';
+import { ScrollContext } from 'src/context';
+import { scrollToAboutUs, scrollToCleaningInfo } from 'src/utils/scrollUtils';
+import { MobileContent } from './mobileContent';
+import { Typography } from 'src/components/typography';
+import { iconData } from 'src/data/icons';
 
 import styles from './Header.module.scss';
 
