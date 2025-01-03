@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import { Grid } from '@mui/material';
 import { useAdditionalItemsStore, useRoomCountStore } from '../../../store/store';
 import { Typography } from '../../../components/typography';
 import { iconList } from '../../../data/additionals';
 
 import style from './AdditionalItems.module.scss';
+import ServiceCard from '../../../components/serviceCard/serviceCard';
 
 export const AdditionalItems = () => {
   const { addMaintenancePrice } = useRoomCountStore();
@@ -27,29 +27,19 @@ export const AdditionalItems = () => {
       <Typography className={style.wrapper_text} variant="h1">
         Выберите опции для Вашей уборки:
       </Typography>
-      <Grid className={style.grid} container spacing={1} columns={{ xs: 2, sm: 4, md: 12 }}>
-        {iconList.map(icon => (
-          <Grid
+      <div className={style.grid}>
+        {iconList.map((icon) => (
+          <ServiceCard
             key={icon.alt}
-            item
-            xs={0}
-            sm={2}
-            md={4}
-            sx={{ paddingLeft: 2 }}
-            className={icon.isAdded ? `${style.gridItem} ${style.selectedItem}` : style.gridItem}
-          >
-            <div className={style.link} onClick={() => handleClick(icon)}>
-              <img className={style.img} src={icon.src} alt={icon.alt} />
-              <Typography className={style.text} variant="semiBold">
-                {icon.text}
-              </Typography>
-              <div className={style.priceBlock}>
-                <Typography variant="semiBold">{icon.price}</Typography>
-              </div>
-            </div>
-          </Grid>
+            src={icon.src}
+            alt={icon.alt}
+            text={icon.text}
+            price={`${icon.price}`}
+            isSelected={icon.isAdded}
+            onClick={() => handleClick(icon)}
+          />
         ))}
-      </Grid>
+      </div>
     </div>
   );
 };
