@@ -1,12 +1,12 @@
 .h1 {
-  font-size: 32px;
+  font-size: clamp(20px, 2.5vw, 40px);
   font-weight: 600;
-  line-height: 38px;
-  @media (width < 1024px) {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 40px;
-  }
+  line-height: clamp(5px, 3vw, 50px);
+  //@media (width < 1024px) {
+  //  font-size: 24px;
+  //  font-weight: 600;
+  //  line-height: 40px;
+  //}
 }
 .h2 {
   font-size: 22px;
@@ -27,15 +27,15 @@
 }
 
 .h3 {
-  font-size: 18px;
+  font-size: clamp(12px, 1.8vw, 35px);
   font-weight: 600;
   letter-spacing: 0;
-  @media (width < 1024px) {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: 0.01em;
-  }
+  //@media (width < 1024px) {
+  //  font-size: 18px;
+  //  font-weight: 500;
+  //  line-height: 22px;
+  //  letter-spacing: 0.01em;
+  //}
 }
 .regular_xs {
   font-size: 12px;
@@ -75,12 +75,12 @@
 }
 .medium {
   font-weight: 400;
-  font-size: 18px;
-  @media (width < 1024px) {
-    font-size: 17px;
-    line-height: 22px;
-    font-weight: 400;
-  }
+  font-size: clamp(12px, 1.2vw, 25px);
+  //@media (width < 1024px) {
+  //  font-size: 17px;
+  //  line-height: 22px;
+  //  font-weight: 400;
+  //}
 }
 .semiBold_s {
   font-size: 10px;
