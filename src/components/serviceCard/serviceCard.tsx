@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ServiceCard.module.scss';
 interface ServiceCardProps {
   src: string;
@@ -9,7 +8,7 @@ interface ServiceCardProps {
   onClick: () => void;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ src, alt, text, price, isSelected, onClick }) => {
+const ServiceCard = ({ src, alt, text, price, isSelected, onClick }: ServiceCardProps) => {
   return (
     <div
       className={`${styles.card} ${isSelected ? styles.selected : ''}`}
