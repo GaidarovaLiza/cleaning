@@ -6,7 +6,7 @@ import { Typography } from '../../components/typography';
 import { declineBathroom, declineRoom } from '../../utils/declineUtils';
 import { DefaultButton } from '../../components/defaultButton';
 
-import style from './AddCountForm.module.scss';
+import styles from './AddCountForm.module.scss';
 
 const AddCountForm = () => {
   const { roomCount, setRoomCount, bathRoomCount, setBathRoomCount, calculateMaintenancePrice } = useRoomCountStore();
@@ -35,27 +35,27 @@ const AddCountForm = () => {
   };
 
   return (
-    <form className={style.form}>
-      <div className={style.form_incDec}>
-        <div className={style.form_content}>
+    <form className={styles.form}>
+      <div className={styles.form_incDec}>
+        <div className={styles.form_content}>
           <IncDecButton onClick={decreaseRoomCount} content="-" />
-          <div className={style.form_text}>
-            <Typography className={style.form_typographyText} children={roomCount} variant={'h2'} />
+          <div className={styles.form_text}>
+            <Typography className={styles.form_typographyText} children={roomCount} variant={'h2'} />
             <Typography children={declineRoom(roomCount)} variant={'h2'} />
           </div>
           <IncDecButton onClick={increaseRoomCount} content="+" />
         </div>
-        <div className={style.form_content}>
+        <div className={styles.form_content}>
           <IncDecButton onClick={decreaseBathRoomCount} content="-" />
-          <div className={style.form_text}>
-            <Typography className={style.form_typographyText} children={bathRoomCount} variant={'h2'} />
+          <div className={styles.form_text}>
+            <Typography className={styles.form_typographyText} children={bathRoomCount} variant={'h2'} />
             <Typography children={declineBathroom(bathRoomCount)} variant={'h2'} />
           </div>
           <IncDecButton onClick={increaseBathRoomCount} content="+" />
         </div>
       </div>
       <DefaultButton
-        className={style.form_button}
+        className={styles.form_button}
         text="Рассчитать стоимость"
         variant="fulfilled"
         onClick={handleCalculate}

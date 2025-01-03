@@ -1,5 +1,5 @@
 import { ReactNode, useCallback, useMemo } from 'react';
-import style from './DefaultButton.module.scss';
+import styles from './DefaultButton.module.scss';
 
 export type ButtonProps = {
   className?: string;
@@ -53,7 +53,7 @@ export const DefaultButton = ({
     <>
       {variant === 'fulfilled' && (
         <button
-          className={`${style.button} ${style.buttonFulfilled} ${className || ''}`}
+          className={`${styles.button} ${styles.buttonFulfilled} ${className || ''}`}
           disabled={disabled || loading}
           onClick={onClickHandler}
           style={{ ...sizeStyles }}
@@ -64,7 +64,7 @@ export const DefaultButton = ({
       )}
       {variant === 'outlined' && (
         <button
-          className={`${style.button} ${style.buttonOutlined} ${className || ''}`}
+          className={`${styles.button} ${styles.buttonOutlined} ${className || ''}`}
           data-is-border={isBorder}
           disabled={disabled || loading}
           onClick={onClickHandler}
@@ -76,7 +76,7 @@ export const DefaultButton = ({
       )}
       {variant === 'withOutBorder' && (
         <button
-          className={`${style.button} ${style.withOutBorder} ${className || ''}`}
+          className={`${styles.button} ${styles.withOutBorder} ${className || ''}`}
           disabled={disabled || loading}
           onClick={onClickHandler}
         >

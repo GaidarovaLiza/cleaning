@@ -1,5 +1,5 @@
-import style from './AddAdditionForm.module.scss';
+import styles from './AddAdditionForm.module.scss';
 
 export const AddAdditionsForm = () => {
-  return <div className={style.wrapper}>{/* <Chips label={'Дополнительные услуги'} value={iconList} /> */}</div>;
+  return <div className={styles.wrapper}>{/* <Chips label={'Дополнительные услуги'} value={iconList} /> */}</div>;
 };

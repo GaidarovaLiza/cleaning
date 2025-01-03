@@ -4,7 +4,7 @@ import { Modal as MuiModal } from '@mui/base';
 import CloseIcon from '@mui/icons-material/Close';
 import { SvgIcon } from '@mui/material';
 
-import style from './Modal.module.scss';
+import styles from './Modal.module.scss';
 import { Typography } from '../typography';
 
 export interface ModalProps {
@@ -47,31 +47,31 @@ export const Modal = ({ buttons, children, classes, header, onClose, open, subti
 
   return (
     <MuiModal
-      className={`${style.modal} ${classes?.root ?? ''}`}
+      className={`${styles.modal} ${classes?.root ?? ''}`}
       onClick={onClick}
       onClose={onClose}
       open={open}
       slots={{ backdrop: Backdrop }}
     >
-      <div className={`${style.modalBody} ${classes?.body ?? ''}`}>
-        <div className={style.header}>
+      <div className={`${styles.modalBody} ${classes?.body ?? ''}`}>
+        <div className={styles.header}>
           <div>
-            <Typography className={style.modal__heading} variant={'h2'}>
+            <Typography className={styles.modal__heading} variant={'h2'}>
               {header}
             </Typography>
             {subtitle && (
-              <Typography className={style.modal__subtitle} variant={'regular'}>
+              <Typography className={styles.modal__subtitle} variant={'regular'}>
                 {subtitle}
               </Typography>
             )}
           </div>
-          <div className={style.closeButton} onClick={onClose}>
+          <div className={styles.closeButton} onClick={onClose}>
             <SvgIcon component={CloseIcon} />
           </div>
         </div>
-        <div className={style.content}>
+        <div className={styles.content}>
           {children}
-          {buttons && <div className={style.buttons}>{buttons}</div>}
+          {buttons && <div className={styles.buttons}>{buttons}</div>}
         </div>
       </div>
     </MuiModal>

@@ -10,7 +10,7 @@ import { ScrollContext } from '../../context';
 import { Typography } from '../../components/typography';
 import { scrollToAboutUs, scrollToCleaningInfo } from '../../utils/scrollUtils';
 
-import style from './Header.module.scss';
+import styles from './Header.module.scss';
 
 
 const menuItems = [
@@ -61,7 +61,7 @@ export const Header = () => {
                 boxShadow: 'none',
                 width: '330px',
               }}
-              className={style.paper}
+              className={styles.paper}
             >
               <MobileContent
                 scrollToCleaningInfo={scrollToCleaningInfoHandler}
@@ -71,26 +71,26 @@ export const Header = () => {
           </Box>
         </Drawer>
       </AppBar>
-      <div className={style.wrapper}>
-        <div className={`${style.container} ${openDrawer ? style.openDrawer : ''}`}>
-          <div className={style.logo}>
+      <div className={styles.wrapper}>
+        <div className={`${styles.container} ${openDrawer ? styles.openDrawer : ''}`}>
+          <div className={styles.logo}>
             {openDrawer ? (
-              <div key="mobileContent" className={style.mobileContent}></div>
+              <div key="mobileContent" className={styles.mobileContent}></div>
             ) : (
               <div onClick={goToMainPageHandler}>
-                <Icon key="logo" className={style.logoImg} src={logo} alt={'Logo'} />
+                <Icon key="logo" className={styles.logoImg} src={logo} alt={'Logo'} />
               </div>
             )}
           </div>
           {menuItems.map(menuItem => (
-            <div key={menuItem.title} className={style.wrapper_menuItem} onClick={menuItem.callback}>
+            <div key={menuItem.title} className={styles.wrapper_menuItem} onClick={menuItem.callback}>
               {menuItem.title}
             </div>
           ))}
-          <div className={style.iconContainer}>
+          <div className={styles.iconContainer}>
             <IconButton
               edge="start"
-              className={openDrawer ? style.hideMenu : ''}
+              className={openDrawer ? styles.hideMenu : ''}
               color="default"
               aria-label="open drawer"
               onClick={() => setOpenDrawer(!openDrawer)}
@@ -99,14 +99,14 @@ export const Header = () => {
               <MenuIcon fontSize="large" />
             </IconButton>
 
-            <div className={style.socialWrapper}>
-              <Typography className={style.number} children={'+375 29 181 5595'} variant="regular" />
-              <div className={style.iconRow}>
+            <div className={styles.socialWrapper}>
+              <Typography className={styles.number} children={'+375 29 181 5595'} variant="regular" />
+              <div className={styles.iconRow}>
                 {iconData.map(icon => (
-                  <div  key={icon.src} className={style.iconRow_iconWrapper}>
+                  <div  key={icon.src} className={styles.iconRow_iconWrapper}>
                     <Icon
                       key={icon.src}
-                      className={style.mobileContent}
+                      className={styles.mobileContent}
                       src={icon.src}
                       alt={icon.alt}
                       href={icon.href}

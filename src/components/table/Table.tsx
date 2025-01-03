@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { Table as MuiTable, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 import { Typography } from '../typography/Typography';
 
-import style from './Table.module.scss';
+import styles from './Table.module.scss';
 
 export type InitialColumnsType = {
   data: string;
@@ -19,15 +19,15 @@ export type TableProps<T extends Type> = {
 
 export const Table = <T extends Type>({ initialColumns, rows }: TableProps<T>) => {
   return (
-    <MuiTable className={style.table}>
+    <MuiTable className={styles.table}>
       <TableHead>
-        <TableRow className={style.head}>
+        <TableRow className={styles.head}>
           {initialColumns.map(headCell => {
             return (
               <TableCell
                 component={'th'}
                 key={headCell.label}
-                className={style.cell}
+                className={styles.cell}
                 padding={'none'}
                 scope="row"
                 style={headCell.width ? { width: `${headCell.width}px` } : {}}
@@ -43,11 +43,11 @@ export const Table = <T extends Type>({ initialColumns, rows }: TableProps<T>) =
       <TableBody>
         {rows.map((row, index) => {
           return (
-            <TableRow key={index} tabIndex={-1} className={style.row}>
+            <TableRow key={index} tabIndex={-1} className={styles.row}>
               {initialColumns.map(column => {
                 const cell = row[column.data];
                 return (
-                  <TableCell key={column.label} className={style.cell} component={'th'} padding={'none'} scope="row">
+                  <TableCell key={column.label} className={styles.cell} component={'th'} padding={'none'} scope="row">
                     <Typography variant={'medium'}>{cell}</Typography>
                   </TableCell>
                 );

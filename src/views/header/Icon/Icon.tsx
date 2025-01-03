@@ -1,4 +1,4 @@
-import style from './Icon.module.scss';
+import styles from './Icon.module.scss';
 
 type IconType = {
   src: string;
@@ -10,7 +10,7 @@ type IconType = {
 export const Icon = ({ src, alt, href, className }: IconType) => {
   return (
     <a href={href}>
-      <img className={`${style.icon} ${className || ''} `} src={src} alt={alt} />
+      <img className={`${styles.icon} ${className || ''} `} src={src} alt={alt} />
     </a>
   );
 };

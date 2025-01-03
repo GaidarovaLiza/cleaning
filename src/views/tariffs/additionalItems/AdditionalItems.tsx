@@ -4,7 +4,7 @@ import { useAdditionalItemsStore, useRoomCountStore } from '../../../store/store
 import { Typography } from '../../../components/typography';
 import { iconList } from '../../../data/additionals';
 
-import style from './AdditionalItems.module.scss';
+import styles from './AdditionalItems.module.scss';
 
 export const AdditionalItems = () => {
   const { addMaintenancePrice } = useRoomCountStore();
@@ -23,11 +23,11 @@ export const AdditionalItems = () => {
   };
 
   return (
-    <div className={style.wrapper}>
-      <Typography className={style.wrapper_text} variant="h1">
+    <div className={styles.wrapper}>
+      <Typography className={styles.wrapper_text} variant="h1">
         Выберите опции для Вашей уборки:
       </Typography>
-      <Grid className={style.grid} container spacing={1} columns={{ xs: 2, sm: 4, md: 12 }}>
+      <Grid className={styles.grid} container spacing={1} columns={{ xs: 2, sm: 4, md: 12 }}>
         {iconList.map(icon => (
           <Grid
             key={icon.alt}
@@ -36,14 +36,14 @@ export const AdditionalItems = () => {
             sm={2}
             md={4}
             sx={{ paddingLeft: 2 }}
-            className={icon.isAdded ? `${style.gridItem} ${style.selectedItem}` : style.gridItem}
+            className={icon.isAdded ? `${styles.gridItem} ${styles.selectedItem}` : styles.gridItem}
           >
-            <div className={style.link} onClick={() => handleClick(icon)}>
-              <img className={style.img} src={icon.src} alt={icon.alt} />
-              <Typography className={style.text} variant="semiBold">
+            <div className={styles.link} onClick={() => handleClick(icon)}>
+              <img className={styles.img} src={icon.src} alt={icon.alt} />
+              <Typography className={styles.text} variant="semiBold">
                 {icon.text}
               </Typography>
-              <div className={style.priceBlock}>
+              <div className={styles.priceBlock}>
                 <Typography variant="semiBold">{icon.price}</Typography>
               </div>
             </div>
