@@ -1,9 +1,15 @@
 .wrapper {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
+	margin-top: 50px;
+
+	@media (width < 450px) {
+	margin-top: 0;
+	}
+
 
   &_roomCount {
     background-image: url('../../assets/elips.svg');
@@ -41,7 +47,7 @@
 
 		@media (width < 450px) {
 			width: 78vw;
-      height: 55vh;
+      height: 50vh;
 			background-size: 180%;
 			background-position: calc(100% + 280px) center;
 		}
@@ -84,6 +90,11 @@
       height: 70px;
       border-radius: 11px;
     }
+
+		@media (width < 100px) {
+			width: 78vw;
+      height: 55vh;
+		}
 
 		@media (width < 950px) {
 			display: none;

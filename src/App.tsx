@@ -20,7 +20,6 @@ function App() {
         <BrowserRouter>
           <ScrollContext.Provider value={{ aboutUsInfoRef, cleaningInfoRef }}>
             <Header />
-					<div className={style.container_wrapp}>
             <Routes>
               <Route
                 path="/"
@@ -35,7 +34,6 @@ function App() {
               <Route path="/send-form" element={<SendForm />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
-					</div>
           </ScrollContext.Provider>
         </BrowserRouter>
 			
