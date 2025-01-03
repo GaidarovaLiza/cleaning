@@ -14,26 +14,28 @@ function App() {
   const cliningInfoRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className={style.container}>
-      <BrowserRouter>
-        <ScrollContext.Provider value={{ aboutUsInfoRef, cliningInfoRef }}>
-          <Header />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Main />
-                  <Info />
-                  <Footer />
-                </>
-              }
-            />
-            <Route path="/send-form" element={<SendForm />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </ScrollContext.Provider>
-      </BrowserRouter>
+    <div className={style.mainContainer}>
+      <div className={style.container}>
+        <BrowserRouter>
+          <ScrollContext.Provider value={{ aboutUsInfoRef, cliningInfoRef }}>
+            <Header />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Main />
+                    <Info />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route path="/send-form" element={<SendForm />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </ScrollContext.Provider>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
