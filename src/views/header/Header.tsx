@@ -8,9 +8,10 @@ import logo from '../../assets/full-logo.png';
 import { MobileContent } from './mobileContent/MobileContent';
 import { ScrollContext } from '../../context';
 import { Typography } from '../../components/typography';
+import { scrollToAboutUs, scrollToCleaningInfo } from '../../utils/scrollUtils';
 
 import style from './Header.module.scss';
-import { scrollToAboutUs, scrollToCleaningInfo } from '../../utils/scrollUtils';
+
 
 const menuItems = [
   {
@@ -33,7 +34,7 @@ const menuItems = [
 
 export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const { aboutUsInfoRef, cleaningInfoRef } = useContext(ScrollContext)!;
+  const { aboutUsInfoRef, cleaningInfoRef } = useContext(ScrollContext) || {};
   const navigate = useNavigate();
 
   const goToMainPageHandler = () => {
@@ -82,7 +83,7 @@ export const Header = () => {
             )}
           </div>
           {menuItems.map(menuItem => (
-            <div className={style.wrapper_menuItem} onClick={menuItem.callback}>
+            <div key={menuItem.title} className={style.wrapper_menuItem} onClick={menuItem.callback}>
               {menuItem.title}
             </div>
           ))}
@@ -102,7 +103,7 @@ export const Header = () => {
               <Typography className={style.number} children={'+375 29 181 5595'} variant="regular" />
               <div className={style.iconRow}>
                 {iconData.map(icon => (
-                  <div className={style.iconRow_iconWrapper}>
+                  <div  key={icon.src} className={style.iconRow_iconWrapper}>
                     <Icon
                       key={icon.src}
                       className={style.mobileContent}

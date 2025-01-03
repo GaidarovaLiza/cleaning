@@ -16,8 +16,8 @@ export const Footer = () => {
       </div>
       <div className={style.footerWrapper_social}>
         {iconData.map(icon => (
-          <div className={style.iconRow}>
-            <Icon key={icon.src} className={style.socialItem} src={icon.src} alt={icon.alt} href={icon.href} />
+          <div key={icon.src} className={style.iconRow}>
+            <Icon className={style.socialItem} src={icon.src} alt={icon.alt} href={icon.href} />
           </div>
         ))}
       </div>
