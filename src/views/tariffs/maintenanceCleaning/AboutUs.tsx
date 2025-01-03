@@ -1,17 +1,18 @@
-import style from './AboutUs.module.scss';
 import { Grid, List, ListItem, ListItemText, ListItemIcon, Divider } from '@mui/material';
 import CheckCircle from '@mui/icons-material/CheckCircle';
 import { useContext } from 'react';
 import { ScrollContext } from '../../../context';
 import { Typography } from '../../../components/typography';
 
+import styles from './AboutUs.module.scss';
+
 export const AboutUs = () => {
   const { aboutUsInfoRef } = useContext(ScrollContext)!;
 
   return (
-    <div className={style.cleaningInfo} ref={aboutUsInfoRef}>
+    <div className={styles.cleaningInfo} ref={aboutUsInfoRef}>
       <Grid item xs={12} md={6} style={{ borderTop: 'none' }}>
-        <Typography className={style.titleColor} variant="h2">
+        <Typography className={styles.titleColor} variant="h2">
           Почему стоит выбрать именно нас?
         </Typography>
       </Grid>

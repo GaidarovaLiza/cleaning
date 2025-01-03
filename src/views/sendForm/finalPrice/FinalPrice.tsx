@@ -17,7 +17,7 @@ import { Input } from '../../../components/Input';
 import { Typography } from '../../../components/typography';
 import { DefaultButton } from '../../../components/defaultButton';
 
-import style from './FinalPrice.module.scss';
+import styles from './FinalPrice.module.scss';
 
 export const FinalPrice = () => {
   const { maintenancePrice, roomCount, bathRoomCount, calculateMaintenancePrice } = useRoomCountStore();
@@ -86,16 +86,16 @@ export const FinalPrice = () => {
   };
 
   return (
-    <div className={style.wrapper}>
-      <div className={style.wrapper_textInfo}>
-        <Typography className={style.wrapper_typography} variant="h2">
+    <div className={styles.wrapper}>
+      <div className={styles.wrapper_textInfo}>
+        <Typography className={styles.wrapper_typography} variant="h2">
           {`Вы выбрали уборку ${roomCount} ${declineChosenRoom(roomCount)}, ${bathRoomCount} ${declineChosenBathroom(
             bathRoomCount
           )}, кухни и коридора`}
         </Typography>
 
-        <div className={style.wrapper_info}>
-          <Typography className={style.wrapper_typography} variant="medium_s">
+        <div className={styles.wrapper_info}>
+          <Typography className={styles.wrapper_typography} variant="medium_s">
             Что входит в уборку квартиры
           </Typography>
           <ClickAwayListener onClickAway={() => setShowTooltip(false)}>
@@ -110,7 +110,7 @@ export const FinalPrice = () => {
               disableTouchListener
               title="Влажная и сухая уборка всех поверхностей"
               classes={{
-                tooltip: style.tooltip,
+                tooltip: styles.tooltip,
               }}
             >
               <HelpOutlineIcon color="primary" onClick={() => setShowTooltip(true)} />
@@ -119,9 +119,9 @@ export const FinalPrice = () => {
         </div>
       </div>
 
-      <Typography className={style.wrapper_payText} variant="h3">{`К оплате: ${maintenancePrice} рублей`}</Typography>
+      <Typography className={styles.wrapper_payText} variant="h3">{`К оплате: ${maintenancePrice} рублей`}</Typography>
       <DefaultButton
-        className={style.wrapper_button}
+        className={styles.wrapper_button}
         onClick={() => setOpen(true)}
         size="huge"
         variant="fulfilled"
@@ -134,7 +134,7 @@ export const FinalPrice = () => {
         header="Заполните форму для обратной связи:"
         onClose={() => setOpen(false)}
       >
-        <form className={style.wrapper_modalWrapper} ref={form}>
+        <form className={styles.wrapper_modalWrapper} ref={form}>
           <Input name="from_name" variant="filled" label="Ваше имя:" value={name} onChange={handleNameChange} />
           <Input
             name="from_phone"

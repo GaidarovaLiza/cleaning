@@ -7,15 +7,15 @@ import { useRef } from 'react';
 import { ScrollContext } from './context/ScrollContext';
 import { Footer } from './views/footer';
 
-import style from './App.module.scss';
+import styles from './App.module.scss';
 
 function App() {
   const aboutUsInfoRef = useRef<HTMLDivElement>(null);
   const cleaningInfoRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className={style.mainContainer}>
-      <div className={style.container}>
+    <div className={styles.mainContainer}>
+      <div className={styles.container}>
 			
         <BrowserRouter>
           <ScrollContext.Provider value={{ aboutUsInfoRef, cleaningInfoRef }}>

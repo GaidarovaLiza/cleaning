@@ -1,6 +1,7 @@
 import { InfoItem } from './InfoItem.tsx';
-import style from './CleaningInfo.module.scss';
 import { Typography } from '../../../components/typography';
+
+import styles from './CleaningInfo.module.scss';
 
 export const CleaningInfo = () => {
   const info = [
@@ -38,10 +39,10 @@ export const CleaningInfo = () => {
 
   return (
     <div>
-      <Typography variant={'h1'} className={style.title}>
-        Забота о вашем доме <br /> с клинингом <span className={style.color}>Дельфин</span>
+      <Typography variant={'h1'} className={styles.title}>
+        Забота о вашем доме <br /> с клинингом <span className={styles.color}>Дельфин</span>
       </Typography>
-      <div className={style.cleaningInfo}>
+      <div className={styles.cleaningInfo}>
         {info.map(item => (
           <InfoItem key={item.id} title={item.title} text={item.text} />
         ))}
