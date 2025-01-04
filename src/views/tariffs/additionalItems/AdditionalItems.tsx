@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Grid } from '@mui/material';
 
 import { useAdditionalItemsStore, useRoomCountStore } from 'src/store/store';
 import { Typography } from 'src/components/typography';
