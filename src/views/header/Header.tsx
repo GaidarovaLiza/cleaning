@@ -85,20 +85,20 @@ export const Header = () => {
           </div>
           {menuItems.map(menuItem => (
             <div key={menuItem.title} className={styles.wrapper_menuItem} onClick={menuItem.callback}>
-              {menuItem.title}
+              <Typography variant='semiBold'>{menuItem.title.toLocaleUpperCase()}</Typography>
             </div>
           ))}
           <div className={styles.iconContainer}>
-            <IconButton
+            {/* <IconButton
               edge="start"
               className={openDrawer ? styles.hideMenu : ''}
               color="default"
               aria-label="open drawer"
               onClick={() => setOpenDrawer(!openDrawer)}
-              sx={{ display: { xs: 'block', sm: 'none' } }}
-            >
-              <MenuIcon fontSize="large" />
-            </IconButton>
+              sx={{  display: 'flex', justifyContent: 'center' }}
+            > */}
+              <MenuIcon onClick={() => setOpenDrawer(!openDrawer)} sx={{fill: 'white'}} fontSize="large" />
+            {/* </IconButton> */}
 
             <div className={styles.socialWrapper}>
               <Typography className={styles.number} children={'+375 29 181 5595'} variant="regular" />

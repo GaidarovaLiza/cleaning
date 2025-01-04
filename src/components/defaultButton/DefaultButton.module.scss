@@ -5,6 +5,7 @@
   gap: 5px;
   border-radius: 15px;
   border: none;
+	cursor: pointer;
 
   &:disabled {
     cursor: not-allowed;
@@ -15,6 +16,7 @@
 .buttonFulfilled {
   color: white;
   background-color: #2059C5;
+	cursor: pointer;
 
   &:hover:not([disabled]) {
     background-color: #2059C5;
@@ -30,6 +32,7 @@
 .buttonOutlined {
   color: #2059C5;
   background-color: white;
+	cursor: pointer;
 
   &[data-is-border='true'] {
     border: 1px solid #2059C5;
