@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 25px 30px;
+  padding: 2.4vw;
   border: 1.5px white solid;
   border-radius: 30px;
+
 
   &_title {
     margin: 0;
@@ -12,5 +13,32 @@
 
   &_text {
     margin-bottom: 0;
+  }
+
+  @media (max-width: 1023px) {
+    border-radius: 14px;
+    padding: clamp(0px, 3.8vw, 30px);
+  }
+
+  @media (min-width: 1023px) {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: white;
+      background-color: #2059C5;
+      border-color: transparent;
+      cursor: default;
+    }
+  }
+}
+
+.highlighted {
+  @media (max-width: 1023px) {
+    transition: color 0.1s ease, background-color 0.1s ease, border-color 0.1s ease;
+
+    color: white;
+    background-color: #2059C5;
+    border-color: transparent;
+    cursor: default;
   }
 }
