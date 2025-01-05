@@ -5,7 +5,7 @@ import { Typography } from 'src/components/typography';
 import { iconList } from 'src/data/additionals';
 
 import style from './AdditionalItems.module.scss';
-import ServiceCard from '../../../components/serviceCard/ServiceCard.tsx';
+import ServiceCard from 'src/components/serviceCard/ServiceCard.tsx';
 
 export const AdditionalItems = () => {
   const { addMaintenancePrice } = useRoomCountStore();
