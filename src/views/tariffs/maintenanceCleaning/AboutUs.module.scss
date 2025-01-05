@@ -1,18 +1,29 @@
 .cleaningInfo {
-  padding: 20px;
-  border-radius: 5px;
-  display: block;
+  width: 100%;
+	background-color: #fff;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	&_text {
+		line-height: 20px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	&_arrow {
+		height: 100px;
+		width: 100px;
+	}
+
+	&_button {
+		width: 265px;
+		border-radius: 10px;
+		height: 55px;
+	}
 }
 
-.cleaningInfo ul {
-  list-style: disc;
-  margin-left: 20px;
-}
-
-.cleaningInfo li {
-  margin-bottom: 10px;
-}
-
-.titleColor {
-  color: #2b5de6;
+.color {
+	color: #2059C5;
 }

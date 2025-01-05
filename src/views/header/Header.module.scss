@@ -8,7 +8,7 @@
   width: 100%;
 
   &_menuItem {
-    margin: 18px;
+    margin: 5px;
     cursor: pointer;
 
 		@media (width < 1000px) {
@@ -24,7 +24,7 @@
 .container {
   position: absolute;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100%;
@@ -64,7 +64,7 @@
 
 .logo {
   padding: 0.8vw 1vw;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .logoImg {
@@ -95,13 +95,21 @@
 .iconContainer {
   display: flex;
   align-items: center;
+	justify-content: center;
   position: relative;
   height: 1vw;
+	margin-right: 10%;
   z-index: 105;
   padding: 25px 15px;
 
   @media (width < 600px) {
-    padding: 20px 0;
+    padding: 18px 7px;
+		margin-right: 35px;
+		display: flex;
+		align-items: center;
+		background-color: #2059C5;
+		border-radius: 5px;
+		width: 31px;
   }
 }
 
