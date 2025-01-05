@@ -1,0 +1,57 @@
+.cleaningInfo {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+
+  @media (width < 550px) {
+    display: grid; 
+    grid-template-columns: 1fr auto; 
+    grid-gap: 5px;
+    align-items: center;
+  }
+
+  &_text {
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+
+		@media (width < 550px) {
+			margin-left: 10px;
+		}
+  }
+
+  &_arrow {
+    height: 100px;
+    width: 100px;
+    justify-self: end;
+    order: 2;
+
+		@media (width < 550px) {
+    height: 60px;
+    width: 60px;
+		margin-top: 50%;
+    }
+  }
+
+  &_button {
+    width: 265px;
+    border-radius: 10px;
+    height: 55px;
+    @media (width < 550px) {
+      width: 100%;
+      box-sizing: border-box;
+      order: 1; 
+			margin-left: 10px;
+			margin-bottom: 20px;
+			height: 45px !important;
+    }
+  }
+}
+
+.color {
+  color: #2059C5;
+}
