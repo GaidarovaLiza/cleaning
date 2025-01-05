@@ -1,4 +1,4 @@
-import styles from './serviceCard.module.scss';
+import styles from './ServiceCard.module.scss';
 interface ServiceCardProps {
   src: string;
   alt: string;
