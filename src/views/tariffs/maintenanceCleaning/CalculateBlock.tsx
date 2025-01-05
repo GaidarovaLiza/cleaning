@@ -1,14 +1,14 @@
 import { useContext } from 'react';
-
-import styles from './AboutUs.module.scss';
 import { ScrollContext } from 'src/context';
 import { Typography } from 'src/components/typography';
 import { Icon } from 'src/views/header/Icon';
 import Arrow from 'src/assets/arrow.svg'
 import { DefaultButton } from 'src/components/defaultButton';
 
+import styles from './AboutUs.module.scss';
 
-export const AboutUs = () => {
+
+export const CalculateBlock = () => {
   const { aboutUsInfoRef } = useContext(ScrollContext)!;
 
   return (
