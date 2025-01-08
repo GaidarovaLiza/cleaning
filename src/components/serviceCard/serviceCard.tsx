@@ -8,7 +8,7 @@ interface ServiceCardProps {
   onClick: () => void;
 }
 
-const ServiceCard = ({ src, alt, text, price, isSelected, onClick }: ServiceCardProps) => {
+export const ServiceCard = ({ src, alt, text, price, isSelected, onClick }: ServiceCardProps) => {
   return (
     <div
       className={`${styles.card} ${isSelected ? styles.selected : ''}`}
@@ -29,4 +29,4 @@ const ServiceCard = ({ src, alt, text, price, isSelected, onClick }: ServiceCard
     </div>
   );
 };
-export default ServiceCard;
+

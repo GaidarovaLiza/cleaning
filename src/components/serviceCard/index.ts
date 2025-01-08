@@ -1,1 +1,1 @@
-export * from './ServiceCard.tsx'
+export * from './ServiceCard'

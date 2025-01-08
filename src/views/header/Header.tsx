@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AppBar, Box, Drawer, IconButton, Paper } from '@mui/material';
+import { AppBar, Box, Drawer, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Icon } from './Icon/Icon';
 
