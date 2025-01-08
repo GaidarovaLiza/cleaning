@@ -1,12 +1,13 @@
 import styles from './ServiceCard.module.scss';
-interface ServiceCardProps {
+
+export type ServiceCardProps = {
   src: string;
   alt: string;
   text: string;
   price: string;
   isSelected: boolean;
   onClick: () => void;
-}
+};
 
 export const ServiceCard = ({ src, alt, text, price, isSelected, onClick }: ServiceCardProps) => {
   return (
@@ -18,15 +19,10 @@ export const ServiceCard = ({ src, alt, text, price, isSelected, onClick }: Serv
     >
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
-          <div className={styles.text}>
-            {text}
-          </div>
+          <div className={styles.text}>{text}</div>
         </div>
-        <div className={styles.priceContainer}>
-          +{price}
-        </div>
+        <div className={styles.priceContainer}>+{price}</div>
       </div>
     </div>
   );
 };
-
