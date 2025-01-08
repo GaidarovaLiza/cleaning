@@ -3,10 +3,9 @@ import { useEffect } from 'react';
 import { useAdditionalItemsStore, useRoomCountStore } from 'src/store/store';
 import { Typography } from 'src/components/typography';
 import { iconList } from 'src/data/additionals';
-import { ServiceCard } from 'src/components/serviceCard';
+import { ServiceCard } from 'src/components/serviceCard/ServiceCard';
 
 import style from './AdditionalItems.module.scss';
-
 
 export const AdditionalItems = () => {
   const { addMaintenancePrice } = useRoomCountStore();
@@ -30,7 +29,7 @@ export const AdditionalItems = () => {
         Выберите опции для Вашей уборки:
       </Typography>
       <div className={style.grid}>
-        {iconList.map((icon) => (
+        {iconList.map(icon => (
           <ServiceCard
             key={icon.alt}
             src={icon.src}
