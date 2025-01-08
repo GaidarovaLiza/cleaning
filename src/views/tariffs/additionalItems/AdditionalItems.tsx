@@ -3,7 +3,8 @@ import { useEffect } from 'react';
 import { useAdditionalItemsStore, useRoomCountStore } from 'src/store/store';
 import { Typography } from 'src/components/typography';
 import { iconList } from 'src/data/additionals';
-import { ServiceCard } from 'src/components/serviceCard/ServiceCard';
+
+import { ServiceCard } from 'src/components/serviceCard';
 
 import style from './AdditionalItems.module.scss';
 
