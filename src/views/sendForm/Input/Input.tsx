@@ -1,6 +1,4 @@
 import TextField from '@mui/material/TextField';
-import { useState } from 'react';
-import { phoneValidate } from '../../utils/validation';
 
 export type InputProps = {
   name?: string;
@@ -8,14 +6,12 @@ export type InputProps = {
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
-  inputProps?: { [key: string]: any };
+  inputProps?: { [key: string]: never };
   validate?: boolean;
 };
 
 export const Input = ({ variant, name, onChange, value, label, inputProps, validate }: InputProps) => {
-  let [isValid, setIsValid] = useState(true);
   const availiableSymbolsForPhoneNumber = new Set('0123456789');
-  const [prevValue, setPrevValue] = useState('+375');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
@@ -28,11 +24,10 @@ export const Input = ({ variant, name, onChange, value, label, inputProps, valid
           newValue = resetString;
         } else{
           const tmpStr = inputValue;
-          if((tmpStr.length <= 11) && availiableSymbolsForPhoneNumber.has(tmpStr[tmpStr.length - 1])) {
+          if((tmpStr.length <= 13) && availiableSymbolsForPhoneNumber.has(tmpStr[tmpStr.length - 1])) {
             newValue = inputValue;
-            setPrevValue(inputValue);
           } else {
-            newValue = prevValue;
+            newValue = resetString;
           }
         }
       } else {
@@ -51,8 +46,6 @@ export const Input = ({ variant, name, onChange, value, label, inputProps, valid
       onChange={handleInputChange}
       inputProps={inputProps}
       name={name}
-      helperText={isValid ? null : 'Неверный формат'}
-      error={!isValid}
     />
   );
 };
