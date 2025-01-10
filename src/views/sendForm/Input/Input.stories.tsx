@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import { Input, InputProps } from './Input';
+import { Input, InputProps } from './Input.tsx';
 
 const meta: Meta<typeof Input> = {
   argTypes: {
