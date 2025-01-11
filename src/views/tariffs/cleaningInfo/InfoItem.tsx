@@ -1,5 +1,5 @@
 import { forwardRef, ReactNode, useEffect, useRef, useState } from 'react';
-import { Typography } from '../../../components/typography';
+import { Typography } from 'src/components/typography';
 
 import styles from './InfoItem.module.scss';
 
@@ -15,7 +15,7 @@ export const InfoItem = forwardRef<HTMLDivElement, TypographyProps>(({ title, te
   const checkVisibility = () => {
     if (itemRef.current) {
       const rect = itemRef.current.getBoundingClientRect();
-      const isVisible = rect.top >= 0.5 * window.innerHeight && rect.top <= 0.6 * window.innerHeight;
+      const isVisible = rect.top >= 0.5 * window.innerHeight && rect.top <= 0.7 * window.innerHeight;
       setIsActive(isVisible);
     }
   };
