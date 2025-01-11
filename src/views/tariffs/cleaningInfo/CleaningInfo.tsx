@@ -40,7 +40,7 @@ export const CleaningInfo = () => {
   return (
     <div>
       <Typography variant={'h1'} className={styles.title}>
-        Забота о вашем доме <br /> с клинингом <span className={styles.color}>Дельфин</span>
+        Забота о вашем доме <br /> с клинингом <span className={styles.color}>Дельфи</span>
       </Typography>
       <div className={styles.cleaningInfo}>
         {info.map(item => (
