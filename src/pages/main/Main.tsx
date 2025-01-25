@@ -1,9 +1,9 @@
-import { Typography } from '../../components/typography';
-import AddCountForm from '../../views/addCountForm/AddCountForm';
+import { Typography } from 'src/components/typography';
+import AddCountForm from 'src/views/addCountForm/AddCountForm';
 import { Icon } from '../../views/header/Icon';
 import Clock from '../../assets/Group 70.png';
 import Clean from '../../assets/Group 69.png';
-import Logo from '../../assets/full-logo-CveyffvM 3.svg'
+import Logo from '../../assets/full-logo-CveyffvM 3.svg';
 
 import styles from './Main.module.scss';
 
@@ -27,7 +27,7 @@ export const Main = () => {
         <div className={styles.wrapper_pic_icon}>
           <Icon src={Clean} key="clean" alt="Clean" className={styles.logo} />
         </div>
-				<div className={styles.wrapper_pic_icon}>
+        <div className={styles.wrapper_pic_icon}>
           <Icon src={Logo} key="logo" alt="Logo" className={styles.logo} />
         </div>
       </div>
