@@ -4,12 +4,11 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-	margin-top: 50px;
+  margin-top: 50px;
 
-	@media (width < 450px) {
-	margin-top: 0;
-	}
-
+  @media (width < 450px) {
+    margin-top: 0;
+  }
 
   &_roomCount {
     background-image: url('../../assets/elips.svg');
@@ -17,7 +16,7 @@
     background-size: 130%;
     background-position: calc(100% + 480px) center;
     width: 42vw;
-    height: 53vh;
+    height: 58vh;
     background-color: #ffffff;
     flex-direction: column;
     display: flex;
@@ -25,53 +24,57 @@
     border-radius: 30px;
 
     @media (width < 1250px) {
-			width: 48vw;
+      width: 48vw;
       height: 55vh;
-			background-size: 150%;
-			background-position: calc(100% + 480px) center;
-		}
+      background-size: 150%;
+      background-position: calc(100% + 480px) center;
+    }
 
-		@media (width < 1100px) {
-			width: 48vw;
+    @media (width < 1100px) {
+      width: 48vw;
       height: 55vh;
-			background-size: 150%;
-			background-position: calc(100% + 380px) center;
-		}
+      background-size: 150%;
+      background-position: calc(100% + 380px) center;
+    }
 
-		@media (width < 612px) {
-			width: 78vw;
+    @media (width < 612px) {
+      width: 78vw;
       height: 55vh;
-			background-size: 180%;
-			background-position: calc(100% + 480px) center;
-		}
+      background-size: 180%;
+      background-position: calc(100% + 480px) center;
+    }
 
-		@media (width < 550px) {
-			width: 78vw;
+    @media (width < 550px) {
+      width: 78vw;
       height: 55vh;
-			background-size: 180%;
-			background-position: calc(100% + 480px) center;
-		}
+      background-size: 180%;
+      background-position: calc(100% + 480px) center;
+    }
 
-		@media (width < 450px) {
-			width: 78vw;
+    @media (width < 450px) {
+      width: 78vw;
       height: 50vh;
-			background-size: 180%;
-			background-position: calc(100% + 280px) center;
-		}
+      background-size: 180%;
+      background-position: calc(100% + 280px) center;
+    }
   }
 
   &_title {
     font-size: 46px;
-    line-height: 1.5;
+    line-height: 1;
 
-		@media (width < 1000px) {
-			font-size: 26px;
-			line-height: 1.5;
-		}
+    @media (width < 1000px) {
+      font-size: 26px;
+      line-height: 1.5;
+    }
   }
 
   &_discount {
-    margin: 0 0 50px 0;
+    margin: 0 0 20px 0;
+
+    @media (width < 431px) {
+      margin: 0 0 50px 0;
+    }
   }
 
   &_pic {
@@ -80,7 +83,7 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 30vw;
-		height: 52vh;
+    height: 56vh;
     border-radius: 30px;
     display: flex;
     align-items: end;
@@ -98,14 +101,14 @@
       border-radius: 11px;
     }
 
-		@media (width < 1000px) {
-			width: 38vw;
+    @media (width < 1000px) {
+      width: 38vw;
       height: 53.5vh;
-		}
+    }
 
-		@media (width < 950px) {
-			display: none;
-		}
+    @media (width < 950px) {
+      display: none;
+    }
   }
 }
 
