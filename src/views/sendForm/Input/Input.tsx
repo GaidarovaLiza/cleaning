@@ -1,6 +1,5 @@
 import TextField from '@mui/material/TextField';
-import { useState } from 'react';
-import { phoneValidate } from '../../utils/validation';
+import { phoneValidate } from 'src/utils/validation.ts';
 
 export type InputProps = {
   name?: string;
@@ -8,27 +7,18 @@ export type InputProps = {
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
-  inputProps?: { [key: string]: any };
+  inputProps?: { [key: string]: never };
   validate?: boolean;
 };
 
 export const Input = ({ variant, name, onChange, value, label, inputProps, validate }: InputProps) => {
-  const [isValid, setIsValid] = useState(true);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
     let newValue = inputValue;
-
     if (validate) {
-      if (label === 'Номер телефона:' && !inputValue.startsWith('+')) {
-        newValue = `+${inputValue}`;
-      }
-
-      newValue = newValue.replace(/[^+\d]/g, '');
-      newValue = newValue.substring(0, 13);
-      setIsValid(phoneValidate(newValue));
+      newValue = phoneValidate(inputValue);
     }
-
     onChange({ ...event, target: { ...event.target, value: newValue } });
   };
 
@@ -41,8 +31,6 @@ export const Input = ({ variant, name, onChange, value, label, inputProps, valid
       onChange={handleInputChange}
       inputProps={inputProps}
       name={name}
-      helperText={isValid ? null : 'Неверный формат'}
-      error={!isValid}
     />
   );
 };

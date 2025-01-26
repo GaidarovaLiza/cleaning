@@ -1,0 +1,50 @@
+.title {
+  margin: 0;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.1vw 2.4vw;
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 12fr 1fr;
+
+  .titleContainer {
+    height: 100%;
+    display: flex;
+    align-content: space-around;
+
+    .title {
+      margin: auto 0;
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: end;
+    align-content: end;
+    .button {
+      cursor: pointer;
+      width: clamp(30px, 2.8vw, 50px) ;
+    }
+  }
+
+
+  .textContainer {
+    transition: max-height 1s ease;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .text {
+    margin-bottom: 0;
+  }
+
+  .expand {
+    max-height: 100px;
+  }
+
+  .collapse {
+    max-height: 0;
+  }
+}

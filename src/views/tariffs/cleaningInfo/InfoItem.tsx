@@ -4,13 +4,13 @@ import { Typography } from 'src/components/typography';
 import styles from './InfoItem.module.scss';
 
 export interface TypographyProps {
-  title: ReactNode;
+  title: string | ReactNode;
   text: string;
 }
 
 export const InfoItem = forwardRef<HTMLDivElement, TypographyProps>(({ title, text }, ref) => {
   const [highlighted, setIsActive] = useState(false);
-  const itemRef = useRef<HTMLDivElement | null>(null); // локальный ref для элемента
+  const itemRef = useRef<HTMLDivElement | null>(null);
 
   const checkVisibility = () => {
     if (itemRef.current) {

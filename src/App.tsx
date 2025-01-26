@@ -1,5 +1,6 @@
 import { Main } from './pages/main/Main';
 import { Info } from './views/tariffs/Info';
+import { Faq } from './views/faq/Faq.tsx';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import SendForm from './views/sendForm/SendForm';
 import { Header } from './views/header/Header';
@@ -16,7 +17,6 @@ function App() {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.container}>
-			
         <BrowserRouter>
           <ScrollContext.Provider value={{ aboutUsInfoRef, cleaningInfoRef }}>
             <Header />
@@ -27,6 +27,7 @@ function App() {
                   <>
                     <Main />
                     <Info />
+                    <Faq />
                     <Footer />
                   </>
                 }
@@ -36,7 +37,6 @@ function App() {
             </Routes>
           </ScrollContext.Provider>
         </BrowserRouter>
-			
       </div>
     </div>
   );

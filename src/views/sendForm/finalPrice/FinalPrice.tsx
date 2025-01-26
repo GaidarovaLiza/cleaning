@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+        import { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import Alert from '@mui/material/Alert';
@@ -10,7 +10,7 @@ import { Typography } from 'src/components/typography';
 import { declineChosenBathroom, declineChosenRoom } from 'src/utils/declineUtils';
 import { DefaultButton } from 'src/components/defaultButton';
 import { Modal } from 'src/components/modal/Modal';
-import { Input } from 'src/components/Input';
+import { Input } from 'src/views/sendForm/Input';
 
 import styles from './FinalPrice.module.scss';
 
@@ -26,6 +26,8 @@ export const FinalPrice = () => {
   const [showSuccessAlert, setShowSuccessAlert] = useState(false);
   const [showErrorAlert, setShowErrorAlert] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
 
   const nameRef = useRef(name);
   const phoneRef = useRef(phone);
@@ -34,11 +36,26 @@ export const FinalPrice = () => {
   const buttonText = isDesktop ? 'Заказать' : `Заказать за ${maintenancePrice} BYN`;
 
   const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPhone(event.target.value);
+    const inputValue = event.target.value;
+
+    setPhone(inputValue);
+
+    if ((name.trim() !== '') && inputValue.length === 13) {
+      setIsButtonDisabled(false);
+    } else {
+      setIsButtonDisabled(true);
+    }
   };
 
+
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const inputName = event.target.value;
     setName(event.target.value);
+    if ((inputName.trim() !== '') && phone.length === 13) {
+      setIsButtonDisabled(false);
+    } else {
+      setIsButtonDisabled(true);
+    }
   };
 
   useEffect(() => {
@@ -123,7 +140,7 @@ export const FinalPrice = () => {
         text={buttonText}
       />
       <Modal
-        buttons={<DefaultButton variant="fulfilled" text="Отправить" onClick={handleSendUserData} />}
+        buttons={<DefaultButton variant="fulfilled" text="Отправить" onClick={handleSendUserData} disabled={isButtonDisabled} />}
         subtitle=" Мы свяжемся с Вами в течении 15 минут для подтверждения заказа"
         open={open}
         header="Заполните форму для обратной связи:"
