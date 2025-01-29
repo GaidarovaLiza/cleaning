@@ -3,9 +3,5 @@
   flex-direction: column;
   align-items: center;
 	gap: 45px;
-
-	@media (width < 780px) {
-		width: 90vw;
-	}
 }
 

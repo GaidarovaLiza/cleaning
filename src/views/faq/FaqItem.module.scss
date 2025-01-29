@@ -7,7 +7,7 @@
 .container {
   background: #ffffff;
   border-radius: 20px;
-  padding: clamp($minWidth * 2.1px, 2.1vw, $maxWidth * 2.1px) clamp($minWidth * 2.4px, 2.4vw, $maxWidth * 2.4px);
+  padding: clamp($desktop-min-width * 2.1px, 2.1vw, $desktop-max-width * 2.1px) clamp($desktop-min-width * 2.4px, 2.4vw, $desktop-max-width * 2.4px);
   margin-bottom: 5px;
   display: grid;
   grid-template-columns: 12fr 1fr;
@@ -27,7 +27,7 @@
     align-content: end;
     .button {
       cursor: pointer;
-      width: clamp($minWidth * 2.8px, 2.8vw, $maxWidth * 2.8px);
+      width: clamp($desktop-min-width * 2.8px, 2.8vw, $desktop-max-width * 2.8px);
     }
   }
 
@@ -39,7 +39,7 @@
   }
 
   .text {
-    margin-top: clamp($minWidth * 0.69px, 0.69vw, $maxWidth * 0.69px);
+    margin-top: clamp($desktop-min-width * 0.69px, 0.69vw, $desktop-max-width * 0.69px);
     margin-bottom: 0;
   }
 
