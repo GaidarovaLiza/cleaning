@@ -1,6 +1,7 @@
 import { forwardRef, ReactNode } from 'react';
 
 import styles from './Typography.module.scss';
+import 'src/data/css-variables.scss';
 
 export interface TypographyProps {
   children: ReactNode;
@@ -32,8 +33,7 @@ export const Typography = forwardRef<HTMLDivElement, TypographyProps>(
         {variant === 'h1' && (
           <h1
             onClick={onClick}
-            style={{ color: color }}
-            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h1} ${className || ''} `}
+            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h1} ${className || ''} ${color ? styles[color] : ''}`}
             ref={ref}
           >
             {children}

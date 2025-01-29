@@ -29,7 +29,7 @@
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 
     &:hover {
-      color: #ffffff;
+      color: $white;
       background-color: #2059C5;
       border-color: transparent;
       cursor: default;
@@ -41,7 +41,7 @@
   @media (max-width: $mobile-width) {
     transition: color 0.1s ease, background-color 0.5s ease, border-color 0.5s ease;
 
-    color: #ffffff;
+    color: $white;
     background-color: #2059C5;
     border-color: transparent;
     cursor: default;
