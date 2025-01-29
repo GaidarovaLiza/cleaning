@@ -7,53 +7,44 @@ export interface TypographyProps {
   className?: string;
   onClick?: () => void;
   isCursorPointer?: boolean;
+  color?: string;
   variant:
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'regular_xs'
-    | 'regular_s'
-    | 'regular'
-    | 'medium_xs'
-    | 'medium_s'
-    | 'medium'
-    | 'semiBold_s'
-    | 'semiBold';
+    | 'xxxs-regular'
+    | 'xxs-regular'
+    | 'xxs-medium'
+    | 'xxs-semibold'
+    | 'xxs-bold'
+    | 'xs-regular'
+    | 's-semibold'
+    | 'm-semibold'
+    | 'l-regular'
+    | 'l-semibold'
+    | 'xl-semibold'
+    | 'xxl-semibold'
+    | 'xxxl-semibold'
+    | 'h1';
 }
 
 export const Typography = forwardRef<HTMLDivElement, TypographyProps>(
-  ({ children, onClick, className, isCursorPointer, variant }, ref) => {
+  ({ children, onClick, className, isCursorPointer, color, variant }, ref) => {
     return (
       <>
         {variant === 'h1' && (
           <h1
             onClick={onClick}
-            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h1} ${className || ''}`}
+            style={{ color: color }}
+            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h1} ${className || ''} `}
             ref={ref}
           >
             {children}
           </h1>
         )}
-        {variant === 'h2' && (
-          <h2
+        {variant !== 'h1' && (
+          <p
             onClick={onClick}
-            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h2} ${className || ''}`}
+            className={`${styles[variant]} ${className || ''} ${color ? styles[color] : ''}`}
             ref={ref}
           >
-            {children}
-          </h2>
-        )}
-        {variant === 'h3' && (
-          <h3
-            onClick={onClick}
-            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h3} ${className || ''}`}
-            ref={ref}
-          >
-            {children}
-          </h3>
-        )}
-        {variant !== 'h1' && variant !== 'h2' && variant !== 'h3' && (
-          <p onClick={onClick} className={`${styles[variant]} ${className || ''}`} ref={ref}>
             {children}
           </p>
         )}

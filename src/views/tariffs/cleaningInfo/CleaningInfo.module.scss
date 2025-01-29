@@ -1,5 +1,7 @@
+@import 'src/data/css-variables';
+
 .title {
-  margin-left: 40px;
+  margin-left: clamp($minWidth * 2.43px, 2.43vw, $maxWidth * 2.43px);
   @media (max-width: 1023px) {
     margin-left: 0;
   }
@@ -14,5 +16,5 @@
 }
 
 .color {
-  color: #2C67F6;
+  color: $vivid-blue;
 }

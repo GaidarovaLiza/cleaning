@@ -1,8 +1,10 @@
+@import 'src/data/css-variables';
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.4vw;
+  padding: clamp(8 * 2.4px, 2.4vw, 20 * 2.4px);
   border: 1.5px white solid;
   border-radius: 30px;
 
@@ -12,12 +14,13 @@
   }
 
   &_text {
+    margin-top: clamp($minWidth * 0.83px, 0.83vw, $maxWidth * 0.83px);
     margin-bottom: 0;
   }
 
   @media (max-width: 1023px) {
     border-radius: 14px;
-    padding: clamp(0px, 3.8vw, 30px);
+    padding: clamp(8 * 2.4px, 2.4vw, 20 * 2.4px);
   }
 
   @media (min-width: 1023px) {
