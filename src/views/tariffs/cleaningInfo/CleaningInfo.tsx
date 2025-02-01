@@ -1,6 +1,6 @@
 import { InfoItem } from './InfoItem.tsx';
 import { Typography } from 'src/components/typography';
-
+import logoBackgroundSrc from 'src/assets/full-logo-4.svg';
 import styles from './CleaningInfo.module.scss';
 
 export const CleaningInfo = () => {
@@ -14,12 +14,12 @@ export const CleaningInfo = () => {
           уборку самостоятельно
         </>
       ),
-      text: 'Выберите только те услуги, которые вам нужны и составьте индивидуальный пакет услуг',
+      text: 'Выберите только те услуги, которые вам нужны, и составьте индивидуальный пакет услуг',
     },
     {
       id: 2,
       title: 'Доверьтесь профессионалам с качественными средствами для уборки',
-      text: 'У нас работают опытные клинеры, которые знают свое дело и пользуются безопасными средствами (класс Е7)',
+      text: 'У нас работают опытные клинеры, которые знают свое дело и пользуются безопасными средствами',
     },
     {
       id: 3,
@@ -39,6 +39,9 @@ export const CleaningInfo = () => {
 
   return (
     <div>
+      <div className={styles.imgContainer}>
+        <img src={logoBackgroundSrc} className={styles.img} />
+      </div>
       <Typography variant={'xxxl-semibold'} className={styles.title}>
         Забота о вашем доме <br /> с клинингом <span className={styles.color}>Дельфин</span>
       </Typography>
