@@ -1,7 +1,7 @@
 .h1 {
-  font-size: clamp(20px, 3.3vw, 60px);
   font-weight: 600;
-  line-height: clamp(5px, 3vw, 50px);
+  font-size: clamp(20px, 3.33vw, 60px);
+  line-height: clamp(5px, 4vw, 50px);
   @media (max-width: 1024px) {
     font-size: clamp(10px, 7.4vw, 45px);
     font-weight: 600;
@@ -101,4 +101,142 @@
 
 .cursor {
   cursor: pointer;
+}
+
+@import 'src/data/css-variables';
+
+.xxxs-regular {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 0.97px, 0.97vw, $desktop-max-width * 0.97px);
+
+  @media (max-width: $mobile-width) {
+    font-size: clamp($mobile-min-width * 3.33px, 3.33vw, $mobile-max-width * 3.33px);
+  }
+}
+
+.xxs-regular {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.11px, 1.11vw, $desktop-max-width * 1.11px);
+
+  @media (max-width: $mobile-width) {
+    font-size: clamp($mobile-min-width * 4.1px, 4.1vw, $mobile-max-width * 4.1px);
+  }
+}
+
+.xxs-medium {
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.11px, 1.11vw, $desktop-max-width * 1.11px);
+
+  @media (max-width: $mobile-width) {
+    font-size: clamp($mobile-min-width * 4.1px, 4.1vw, $mobile-max-width * 4.1px);
+  }
+}
+
+.xxs-semibold {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.11px, 1.11vw, $desktop-max-width * 1.11px);
+}
+
+.xxs-bold {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.11px, 1.11vw, $desktop-max-width * 1.11px);
+}
+
+.xs-regular {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.25px, 1.25vw, $desktop-max-width * 1.25px);
+
+  @media (max-width: $mobile-width) {
+    font-size: clamp($mobile-min-width * 4.1px, 4.1vw, $mobile-max-width * 4.1px);
+  }
+}
+
+.xs-bold {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.25px, 1.25vw, $desktop-max-width * 1.25px);
+
+  @media (max-width: $mobile-width) {
+    font-size: clamp($mobile-min-width * 4.1px, 4.1vw, $mobile-max-width * 4.1px);
+  }
+}
+
+.s-semibold {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.39px, 1.39vw, $desktop-max-width * 1.39px);
+}
+
+.h3, .m-semibold {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.67px, 1.67vw, $desktop-max-width * 1.67px);
+}
+
+.l-regular {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.81px, 1.81vw, $desktop-max-width * 1.81px);
+
+  @media (max-width: $mobile-width) {
+    font-size: clamp($mobile-min-width * 5.38px, 5.38vw, $mobile-max-width * 5.38px);
+  }
+}
+
+.l-semibold {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 1.81px, 1.81vw, $desktop-max-width * 1.81px);
+
+  @media (max-width: $mobile-width) {
+    font-size: clamp($mobile-min-width * 5.38px, 5.38vw, $mobile-max-width * 5.38px);
+  }
+}
+
+.xl-semibold {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 2.22px, 2.22vw, $desktop-max-width * 2.22px);
+
+  @media (max-width: $mobile-width) {
+    font-size: clamp($mobile-min-width * 7.69px, 7.69vw, $mobile-max-width * 7.69px);
+  }
+}
+
+.xxl-semibold {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 2.25px, 2.25vw, $desktop-max-width * 2.25px);
+}
+
+.h1, .xxxl-semibold {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp($desktop-min-width * 3.33px, 3.33vw, $desktop-max-width * 3.33px);
+
+  @media (max-width: $mobile-width) {
+    font-size: clamp($mobile-min-width * 7.69px, 7.69vw, $mobile-max-width * 7.69px);
+  }
+}
+
+.white {
+  color: $white;
+}
+
+.vivid-blue {
+  color: $vivid-blue;
+}
+
+.dark {
+  color: $dark;
+}
+
+.black {
+  color: $black;
 }

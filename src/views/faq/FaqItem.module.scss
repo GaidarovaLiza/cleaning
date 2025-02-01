@@ -1,3 +1,5 @@
+@import 'src/data/css-variables';
+
 .title {
   margin: 0;
 }
@@ -5,7 +7,7 @@
 .container {
   background: #ffffff;
   border-radius: 20px;
-  padding: 2.1vw 2.4vw;
+  padding: clamp($desktop-min-width * 2.1px, 2.1vw, $desktop-max-width * 2.1px) clamp($desktop-min-width * 2.4px, 2.4vw, $desktop-max-width * 2.4px);
   margin-bottom: 5px;
   display: grid;
   grid-template-columns: 12fr 1fr;
@@ -25,7 +27,7 @@
     align-content: end;
     .button {
       cursor: pointer;
-      width: clamp(30px, 2.8vw, 50px) ;
+      width: clamp($desktop-min-width * 2.8px, 2.8vw, $desktop-max-width * 2.8px);
     }
   }
 
@@ -37,11 +39,12 @@
   }
 
   .text {
+    margin-top: clamp($desktop-min-width * 0.69px, 0.69vw, $desktop-max-width * 0.69px);
     margin-bottom: 0;
   }
 
   .expand {
-    max-height: 100px;
+    max-height: 70px;
   }
 
   .collapse {
