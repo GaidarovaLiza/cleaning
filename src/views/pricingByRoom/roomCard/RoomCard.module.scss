@@ -1,0 +1,20 @@
+.wrapper {
+  width: 25vw;
+  height: 394px;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #2059c5;
+
+  &_infoBlock {
+    display: flex;
+    justify-content: space-around;
+
+    &_item {
+      border-radius: 60px;
+      background-color: #ffffff;
+      padding: 8px 17px;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
