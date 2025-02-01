@@ -31,8 +31,8 @@ export const InfoItem = forwardRef<HTMLDivElement, TypographyProps>(({ title, te
 
   return (
     <div ref={itemRef} className={`${styles.container} ${highlighted ? styles.highlighted : ''}`}>
-      <Typography ref={ref} variant={'h3'} children={title} className={styles.container_title} />
-      <Typography ref={ref} variant={'medium'} children={text} className={styles.container_text} />
+      <Typography ref={ref} variant={'l-semibold'} children={title} className={styles.container_title} />
+      <Typography ref={ref} variant={'xs-regular'} children={text} className={styles.container_text} />
     </div>
   );
 });

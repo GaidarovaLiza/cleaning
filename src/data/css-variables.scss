@@ -1,0 +1,14 @@
+
+// @import 'src/data/css-variables'; - таким образом импортируется этот файл
+
+$desktop-min-width: 8; // Минимальная ширина экрана компа / 100
+$desktop-max-width: 20; // Максимальная ширина экрана компа / 100
+
+$mobile-min-width: 2.5; // Минимальная ширина экрана мобилы / 100
+$mobile-max-width: 4.5; // Максимальная ширина экрана мобилы / 100
+$mobile-width: 1024px;
+
+$white: #FFFFFF;
+$vivid-blue: #0A5FFE;
+$dark: #010B23;
+$black: #0C0000;

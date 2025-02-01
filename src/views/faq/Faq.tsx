@@ -25,7 +25,7 @@ export const Faq = forwardRef<HTMLDivElement>(() => {
   return (
     <div className={styles.container}>
       {faq.map(item => (
-        <FaqItem title={item.title} text={item.text} />
+        <FaqItem title={item.title} text={item.text} key={item.id} />
       ))}
     </div>
   );

@@ -1,7 +1,10 @@
+@import 'src/data/css-variables';
+
 .title {
-  margin-left: 40px;
+  margin: 0 0 clamp($desktop-min-width * 2.08px, 2.08vw, $desktop-max-width * 2.08px) clamp($desktop-min-width * 2.43px, 2.43vw, $desktop-max-width * 2.43px);
   @media (max-width: 1023px) {
     margin-left: 0;
+    margin-bottom: clamp($mobile-min-width * 3.85px, 3.85vw, $mobile-max-width * 3.85px);
   }
 }
 
@@ -14,5 +17,5 @@
 }
 
 .color {
-  color: #2C67F6;
+  color: $vivid-blue;
 }

@@ -1,5 +1,5 @@
 import { InfoItem } from './InfoItem.tsx';
-import { Typography } from '../../../components/typography';
+import { Typography } from 'src/components/typography';
 
 import styles from './CleaningInfo.module.scss';
 
@@ -39,7 +39,7 @@ export const CleaningInfo = () => {
 
   return (
     <div>
-      <Typography variant={'h1'} className={styles.title}>
+      <Typography variant={'xxxl-semibold'} className={styles.title}>
         Забота о вашем доме <br /> с клинингом <span className={styles.color}>Дельфин</span>
       </Typography>
       <div className={styles.cleaningInfo}>
