@@ -15,7 +15,8 @@
   height: 100%;
   width: 80vw;
   max-width: $desktop-max-width * 100px;
-  overflow-y: none;
+  overflow-y: hidden;
+  gap: clamp($desktop-min-width * 4.17px, 4.17vw, $desktop-max-width * 4.17px);
 
   @media (max-width: $mobile-width) {
     width: 90vw;

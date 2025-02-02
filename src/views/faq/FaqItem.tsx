@@ -1,5 +1,7 @@
 import { forwardRef, useState } from 'react';
 import { Typography } from 'src/components/typography';
+import Plus from  'src/assets/plus.svg';
+import Minus from 'src/assets/minus.svg';
 
 import styles from './FaqItem.module.scss';
 
@@ -11,12 +13,12 @@ export interface TypographyProps {
 export const FaqItem = forwardRef<HTMLDivElement, TypographyProps>(({ title, text }, ref) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isPlus, setIsPlus] = useState(true);
-  const [svgSrc, setSvgSrc] = useState('src/assets/plus.svg');
+  const [svgSrc, setSvgSrc] = useState(Plus);
 
   const toggleText = () => {
     setIsOpen(prev => !prev);
     setIsPlus(prev => !prev);
-    setSvgSrc(isOpen ? 'src/assets/plus.svg' : 'src/assets/minus.svg');
+    setSvgSrc(isOpen ? Plus : Minus);
   };
 
   return (
