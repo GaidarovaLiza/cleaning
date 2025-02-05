@@ -1,0 +1,19 @@
+.container {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  padding-bottom: 3px;
+}
+
+.units {
+  display: flex;
+}
+
+.text {
+  padding-top: 10px;
+  border-top: 2px solid #c1d1f5;
+}

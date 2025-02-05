@@ -106,6 +106,7 @@
 @import 'src/data/css-variables';
 
 .xxxs-regular {
+  margin: 0;
   font-weight: 400;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 0.97px, 0.97vw, $desktop-max-width * 0.97px);
@@ -116,6 +117,7 @@
 }
 
 .xxs-regular {
+  margin: 0;
   font-weight: 400;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.11px, 1.11vw, $desktop-max-width * 1.11px);
@@ -126,6 +128,7 @@
 }
 
 .xxs-medium {
+  margin: 0;
   font-weight: 500;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.11px, 1.11vw, $desktop-max-width * 1.11px);
@@ -136,18 +139,21 @@
 }
 
 .xxs-semibold {
+  margin: 0;
   font-weight: 600;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.11px, 1.11vw, $desktop-max-width * 1.11px);
 }
 
 .xxs-bold {
+  margin: 0;
   font-weight: 700;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.11px, 1.11vw, $desktop-max-width * 1.11px);
 }
 
 .xs-regular {
+  margin: 0;
   font-weight: 400;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.25px, 1.25vw, $desktop-max-width * 1.25px);
@@ -158,6 +164,7 @@
 }
 
 .xs-bold {
+  margin: 0;
   font-weight: 700;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.25px, 1.25vw, $desktop-max-width * 1.25px);
@@ -168,18 +175,21 @@
 }
 
 .s-semibold {
+  margin: 0;
   font-weight: 600;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.39px, 1.39vw, $desktop-max-width * 1.39px);
 }
 
 .h3, .m-semibold {
+  margin: 0;
   font-weight: 600;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.67px, 1.67vw, $desktop-max-width * 1.67px);
 }
 
 .l-regular {
+  margin: 0;
   font-weight: 400;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.81px, 1.81vw, $desktop-max-width * 1.81px);
@@ -190,6 +200,7 @@
 }
 
 .l-semibold {
+  margin: 0;
   font-weight: 600;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 1.81px, 1.81vw, $desktop-max-width * 1.81px);
@@ -200,22 +211,24 @@
 }
 
 .xl-semibold {
+  margin: 0;
   font-weight: 600;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 2.22px, 2.22vw, $desktop-max-width * 2.22px);
-
   @media (max-width: $mobile-width) {
     font-size: clamp($mobile-min-width * 7.69px, 7.69vw, $mobile-max-width * 7.69px);
   }
 }
 
 .xxl-semibold {
+  margin: 0;
   font-weight: 600;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 2.25px, 2.25vw, $desktop-max-width * 2.25px);
 }
 
 .h1, .xxxl-semibold {
+  margin: 0;
   font-weight: 600;
   line-height: 1.2;
   font-size: clamp($desktop-min-width * 3.33px, 3.33vw, $desktop-max-width * 3.33px);
@@ -231,6 +244,10 @@
 
 .vivid-blue {
   color: $vivid-blue;
+}
+
+.blue {
+  color: $blue;
 }
 
 .dark {

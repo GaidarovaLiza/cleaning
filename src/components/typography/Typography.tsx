@@ -37,13 +37,13 @@ export interface TypographyProps {
 }
 
 export const Typography = forwardRef<HTMLDivElement, TypographyProps>(
-  ({ children, onClick, className, isCursorPointer, color = 'dark', variant }, ref) => {
+  ({ children, onClick, className, isCursorPointer, color, variant }, ref) => {
     return (
       <>
         {variant === 'h1' && (
           <h1
             onClick={onClick}
-            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h1} ${className || ''} ${styles[color]}`}
+            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h1} ${className || ''} ${color ? styles[color] : 'dark'}`}
             ref={ref}
           >
             {children}
@@ -52,17 +52,16 @@ export const Typography = forwardRef<HTMLDivElement, TypographyProps>(
         {variant === 'h3' && (
           <h3
             onClick={onClick}
-            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h3} ${className || ''} ${styles[color]}`}
+            className={`${isCursorPointer ? styles.cursor : ''} ${styles.h3} ${className || ''} ${color ? styles[color] : 'dark'}`}
             ref={ref}
           >
             {children}
           </h3>
         )}
-        {variant !== 'h1' && (
+        {variant !== 'h1' && variant !== 'h3' && (
           <p
             onClick={onClick}
-            style={{ color: `${color}`}}
-            className={`${styles[variant]} ${className || ''} ${styles[color]}`}
+            className={`${styles[variant]} ${color ? styles[color] : 'dark'} ${className || ''}`}
             ref={ref}
           >
             {children}

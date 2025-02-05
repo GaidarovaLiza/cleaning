@@ -9,11 +9,10 @@ export interface TypographyProps {
 }
 
 export const InfoItem = forwardRef<HTMLDivElement, TypographyProps>(({ title, text }, ref) => {
-
   return (
     <div className={styles.container}>
-      <Typography ref={ref} variant={'l-semibold'} children={title} className={styles.container_title} />
-      <Typography ref={ref} variant={'xs-regular'} children={text} className={styles.container_text} />
+      <Typography ref={ref} variant={'l-semibold'} color={'dark'} children={title} className={styles.container_title} />
+      <Typography ref={ref} variant={'xs-regular'} color={'dark'} children={text} className={styles.container_text} />
     </div>
   );
 });
