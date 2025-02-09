@@ -9,7 +9,6 @@
   gap: 20px;
   margin-top: 10%;
 
-
   @media (width < 450px) {
     margin-top: 0;
   }
@@ -24,7 +23,8 @@
     background-color: #ffffff;
     flex-direction: column;
     display: flex;
-    padding: clamp($desktop-min-width * 4.17px, 4.17vw, $desktop-max-width * 4.17px) clamp($desktop-min-width * 2.43px, 2.43vw, $desktop-max-width * 2.43px);
+    padding: clamp($desktop-min-width * 4.17px, 4.17vw, $desktop-max-width * 4.17px)
+      clamp($desktop-min-width * 2.43px, 2.43vw, $desktop-max-width * 2.43px);
     border-radius: 30px;
 
     @media (width < 1250px) {

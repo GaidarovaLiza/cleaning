@@ -4,7 +4,7 @@ import { AppBar, Box, Drawer, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Icon } from './Icon/Icon';
 
-import logo from 'src/assets/full-logo.png';
+import logo from 'src/assets/full-logo.png'; //replace
 import { ScrollContext } from 'src/context';
 import { scrollToAboutUs, scrollToCleaningInfo } from 'src/utils/scrollUtils';
 import { MobileContent } from './mobileContent';
@@ -12,7 +12,6 @@ import { Typography } from 'src/components/typography';
 import { iconData } from 'src/data/icons';
 
 import styles from './Header.module.scss';
-
 
 const menuItems = [
   {
@@ -85,7 +84,7 @@ export const Header = () => {
           </div>
           {menuItems.map(menuItem => (
             <div key={menuItem.title} className={styles.wrapper_menuItem} onClick={menuItem.callback}>
-              <Typography variant='semiBold'>{menuItem.title.toLocaleUpperCase()}</Typography>
+              <Typography variant="semiBold">{menuItem.title.toLocaleUpperCase()}</Typography>
             </div>
           ))}
           <div className={styles.iconContainer}>
@@ -97,14 +96,14 @@ export const Header = () => {
               onClick={() => setOpenDrawer(!openDrawer)}
               sx={{  display: 'flex', justifyContent: 'center' }}
             > */}
-              <MenuIcon onClick={() => setOpenDrawer(!openDrawer)} sx={{fill: 'white'}} fontSize="large" />
+            <MenuIcon onClick={() => setOpenDrawer(!openDrawer)} sx={{ fill: 'white' }} fontSize="large" />
             {/* </IconButton> */}
 
             <div className={styles.socialWrapper}>
               <Typography className={styles.number} children={'+375 29 181 5595'} variant="regular" />
               <div className={styles.iconRow}>
                 {iconData.map(icon => (
-                  <div  key={icon.src} className={styles.iconRow_iconWrapper}>
+                  <div key={icon.src} className={styles.iconRow_iconWrapper}>
                     <Icon
                       key={icon.src}
                       className={styles.mobileContent}

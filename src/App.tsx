@@ -9,6 +9,7 @@ import { ScrollContext } from './context/ScrollContext';
 import { Footer } from './views/footer';
 
 import styles from './App.module.scss';
+import PricingByRoom from './views/pricingByRoom/PricingByRoom.tsx';
 
 function App() {
   const aboutUsInfoRef = useRef<HTMLDivElement>(null);
@@ -27,6 +28,7 @@ function App() {
                   <>
                     <Main />
                     <Info />
+                    <PricingByRoom />
                     <Faq />
                     <Footer />
                   </>

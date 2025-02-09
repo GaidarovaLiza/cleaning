@@ -1,0 +1,75 @@
+.wrapper {
+  width: 25vw;
+  height: 394px;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: #2059c5;
+
+  &_infoBlock {
+    display: flex;
+    justify-content: space-around;
+
+    &_item {
+      border-radius: 60px;
+      background-color: #ffffff;
+      padding: 8px 17px;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+
+  &_title {
+    max-width: 200px;
+  }
+
+  &_line {
+    height: 1px;
+    width: 100%;
+    background-color: #88abff;
+    margin-top: 10px;
+  }
+
+  &_listWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &_realPrice {
+    color: #b3c8fc;
+    font-weight: 600;
+    text-decoration: line-through;
+    margin: 18px 0 0 0;
+  }
+
+  &_discontPrice {
+    margin: 10px 0 0 0;
+  }
+
+  &_buttonBlock {
+    display: flex;
+    gap: 9px;
+    justify-content: space-between;
+  }
+}
+
+.list {
+  display: flex;
+
+  gap: 10px;
+}
+
+.typography {
+  margin: 0;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #2059c5;
+  width: 60%;
+  height: 40px;
+}
+
+.button:hover {
+  background-color: #ffffff;
+}
