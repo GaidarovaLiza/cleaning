@@ -5,7 +5,7 @@
 
   &_textWrapper {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     align-items: center;
   }
 
@@ -17,4 +17,8 @@
 
 .color {
   color: #2059c5;
+}
+
+.bold {
+  font-weight: 600;
 }
