@@ -26,22 +26,22 @@ const PricingByRoom = () => {
         <RoomCard
           title="Однокомнатная квартира"
           backgroundColor='#2059C5'
-          discountPrice="72 BYN"
-          realPrice="84 BYN"
+          discountPrice={`${!active ? '72 BYN' : '92 BYN'}`}
+          realPrice={`${!active ? '84 BYN' : '104 BYN'}`}
           includedOption={oneRoomPrice}
         />
         <RoomCard
           title="Двухкомнатная квартира"
-          discountPrice="96 BYN"
+          discountPrice={`${!active ? '96 BYN' : '130 BYN'}`}
           backgroundColor='#1A61E7'
-          realPrice="110 BYN"
+          realPrice={`${!active ? '110 BYN' : '130 BYN'}`}
           includedOption={twoRoomPrice}
         />
         <RoomCard
           title="Трехкомнатная квартира"
-          discountPrice="120 BYN"
+          discountPrice={`${!active ? '120 BYN' : '170 BYN'}`}
           backgroundColor='#0A5FFE'
-          realPrice="145 BYN"
+          realPrice={`${!active ? '145 BYN' : '165 BYN'}`}
           includedOption={threeRoomPrice}
         />
       </div>
