@@ -1,13 +1,12 @@
 .wrapper {
   width: 25vw;
-  height: 394px;
+  height: 80%;
   border-radius: 30px;
   padding: 20px;
-  background-color: #2059c5;
 
   &_infoBlock {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     &_item {
       border-radius: 60px;

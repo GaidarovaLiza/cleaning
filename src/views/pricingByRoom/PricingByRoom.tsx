@@ -25,19 +25,22 @@ const PricingByRoom = () => {
       <div className={style.blockWrapper_cards}>
         <RoomCard
           title="Однокомнатная квартира"
-          discontPrice="72 BYN"
+          backgroundColor='#2059C5'
+          discountPrice="72 BYN"
           realPrice="84 BYN"
           includedOption={oneRoomPrice}
         />
         <RoomCard
           title="Двухкомнатная квартира"
-          discontPrice="96 BYN"
+          discountPrice="96 BYN"
+          backgroundColor='#1A61E7'
           realPrice="110 BYN"
           includedOption={twoRoomPrice}
         />
         <RoomCard
           title="Трехкомнатная квартира"
-          discontPrice="120 BYN"
+          discountPrice="120 BYN"
+          backgroundColor='#0A5FFE'
           realPrice="145 BYN"
           includedOption={threeRoomPrice}
         />

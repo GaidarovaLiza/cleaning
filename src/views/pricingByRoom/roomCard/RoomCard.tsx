@@ -8,7 +8,8 @@ interface RoomCardProps {
   title?: string;
   includedOption?: RoomOption[];
   realPrice?: string;
-  discontPrice?: string;
+  discountPrice?: string;
+  backgroundColor: string
 }
 
 type RoomOption = {
@@ -16,10 +17,9 @@ type RoomOption = {
   name: string;
 };
 
-const RoomCard = ({ discontPrice, includedOption, realPrice, title }: RoomCardProps) => {
-  console.log(discontPrice, includedOption, realPrice, title);
+const RoomCard = ({ discountPrice, includedOption, realPrice, title, backgroundColor }: RoomCardProps) => {
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper} style={{backgroundColor: backgroundColor}}>
       <div className={style.wrapper_infoBlock}>
         <div className={style.wrapper_infoBlock_item}>разовая уборка</div>
         <div className={style.wrapper_infoBlock_item}>оплата после уборки</div>
@@ -46,7 +46,7 @@ const RoomCard = ({ discontPrice, includedOption, realPrice, title }: RoomCardPr
       </Typography>
       <div className={style.wrapper_buttonBlock}>
         <Typography className={style.wrapper_discontPrice} color="white" variant="xl-semibold">
-          {discontPrice}
+          {discountPrice}
         </Typography>
         <DefaultButton className={style.button} variant="fulfilled" text="ЗАКАЗАТЬ" onClick={() => {}} />
       </div>
