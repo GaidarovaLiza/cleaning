@@ -1,4 +1,5 @@
 import { Main } from './pages/main/Main';
+import { AboutUs } from 'src/views/aboutUs/AboutUs';
 import { Info } from './views/tariffs/Info';
 import { Faq } from './views/faq/Faq.tsx';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
@@ -26,7 +27,10 @@ function App() {
                 path="/"
                 element={
                   <>
+                    <div className={styles.first}>
                     <Main />
+                    <AboutUs />
+                    </div>
                     <Info />
                     <PricingByRoom />
                     <Faq />

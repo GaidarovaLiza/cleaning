@@ -23,3 +23,9 @@
     max-width: 800px;
   }
 }
+
+.first {
+  display: flex;
+  flex-direction: column;
+  gap: clamp($desktop-min-width * 2px, 2vw, $desktop-max-width * 2px);
+}
