@@ -4,8 +4,9 @@
   flex-direction: column;
 
   &_textWrapper {
-    display: flex;
+    display: inline-flex;
     gap: 25px;
+    width: 100%;
     align-items: center;
   }
 
@@ -21,4 +22,7 @@
 
 .bold {
   font-weight: 600;
+}
+.typography {
+  width: 320px;
 }

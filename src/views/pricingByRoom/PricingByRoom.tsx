@@ -14,18 +14,19 @@ const PricingByRoom = () => {
         <span className={style.color}> Стоимость услуг</span> в зависимости <br /> от количества комнат
       </Typography>
       <div className={style.blockWrapper_textWrapper}>
-        <Typography variant="l-regular" className={`${!active ? style.bold : ''}`}>
+        <Typography variant="l-regular" className={`${style.typography} ${!active ? style.bold : ''}`}>
           Поддерживающая уборка
         </Typography>
+
         <Switch value={active} onChange={() => setActive(!active)} />
-        <Typography variant="l-regular" className={`${active ? style.bold : ''}`}>
+        <Typography variant="l-regular" className={`${style.typography} ${active ? style.bold : ''}`}>
           Генеральная уборка
         </Typography>
       </div>
       <div className={style.blockWrapper_cards}>
         <RoomCard
           title="Однокомнатная квартира"
-          backgroundColor='#2059C5'
+          backgroundColor="#2059C5"
           discountPrice={`${!active ? '72 BYN' : '92 BYN'}`}
           realPrice={`${!active ? '84 BYN' : '104 BYN'}`}
           includedOption={oneRoomPrice}
@@ -33,14 +34,14 @@ const PricingByRoom = () => {
         <RoomCard
           title="Двухкомнатная квартира"
           discountPrice={`${!active ? '96 BYN' : '130 BYN'}`}
-          backgroundColor='#1A61E7'
+          backgroundColor="#1A61E7"
           realPrice={`${!active ? '110 BYN' : '130 BYN'}`}
           includedOption={twoRoomPrice}
         />
         <RoomCard
           title="Трехкомнатная квартира"
           discountPrice={`${!active ? '120 BYN' : '170 BYN'}`}
-          backgroundColor='#0A5FFE'
+          backgroundColor="#0A5FFE"
           realPrice={`${!active ? '145 BYN' : '165 BYN'}`}
           includedOption={threeRoomPrice}
         />
