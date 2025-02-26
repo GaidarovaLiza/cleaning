@@ -1,0 +1,43 @@
+name: Deploy Node.js Project with Nginx
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /root/ssh-repo/cleaning
+            git pull origin master
+            npm install --production
+            npm run build
+            # Остановка текущего процесса Node.js (если запущен)
+            pkill -f "node" || true  # Останавливаем все Node.js процессы
+            # Запуск приложения
+            npm start &
+            # Перезапуск Nginx
+            sudo systemctl restart nginx
