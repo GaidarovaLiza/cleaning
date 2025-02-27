@@ -49,11 +49,11 @@ export const Item = forwardRef<HTMLDivElement, TypographyProps>(({ number, units
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.top}>
-        <div style={{ '--width': number.toString().length + 1.3 }}>
+        {/*<div style={{ '--width': number.toString().length + 1.3 }}>*/}
         <Typography variant={'xxl-semibold'} color={'blue'} className={styles.dynamicWidth}>
           <AnimatedNumber endNumber={number} />+
         </Typography>
-        </div>
+        {/*</div>*/}
         <Typography variant={'l-semibold'} color={'blue'} className={styles.units}>
           {units}
         </Typography>
